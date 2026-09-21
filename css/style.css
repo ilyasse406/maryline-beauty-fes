@@ -50,9 +50,54 @@ a {
 .brand {
   font-family: "Cinzel", "Times New Roman", serif;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mono {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--or);
+  box-shadow: 0 0 0 3px var(--noir), 0 0 0 4px #7A5128;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  letter-spacing: -0.04em;
 }
 
 .nav a {
   font-family: "Cinzel", "Times New Roman", serif;
   font-weight: 600;
+}
+
+.btn-appeler {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #000000;
+  background: linear-gradient(180deg, #F4D59A, #C9964F 55%, #9A6A35);
+  padding: 12px 22px;
+}
+
+.brand-name {
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+}
+
+.brand-name small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.gold-text {
+  background: linear-gradient(180deg, #F4D59A, #D6A560 45%, #9A6A35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
