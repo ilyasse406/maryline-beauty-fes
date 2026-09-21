@@ -39,6 +39,12 @@ a {
   justify-content: space-between;
   padding: 16px 20px;
   border-bottom: 1px solid rgba(201, 150, 79, 0.3);
+    position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.88);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .nav {
@@ -70,6 +76,8 @@ a {
 .nav a {
   font-family: "Cinzel", "Times New Roman", serif;
   font-weight: 600;
+    position: relative;
+  padding: 8px 2px;
 }
 
 .btn-appeler {
@@ -110,4 +118,21 @@ a {
   width: 16px;
   height: 16px;
   fill: currentColor;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 1px;
+  background: var(--or);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
 }
