@@ -191,6 +191,29 @@ a {
   padding: 12px;
 }
 
+.m-bar {
+  display: none;
+}
+
+.btn-insta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--or);
+  border: 1px solid var(--or);
+}
+
+.btn-insta svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
 @media (max-width: 759px) {
   .nav {
     display: none;
@@ -198,5 +221,33 @@ a {
 
     .burger {
     display: flex;
+  }
+
+    .site-header .btn-appeler {
+    display: none;
+  }
+
+    .m-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(0, 0, 0, 0.94);
+    border-top: 1px solid var(--or);
+  }
+
+  .m-bar a {
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 10px;
+  }
+
+  body {
+    padding-bottom: 76px;
   }
 }
