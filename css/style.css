@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("../fonts/cinzel-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("../fonts/cinzel-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+:root {
+  --noir: #000000;
+  --or: #C9964F;
+  --ivoire: #F2E6D3;
+}
+
+body {
+  background: var(--noir);
+  color: var(--ivoire);
+  margin : 0;
+}
+
+a {
+  color: var(--or);
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(201, 150, 79, 0.3);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+
+.brand {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.nav a {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+}
