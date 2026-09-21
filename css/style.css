@@ -80,6 +80,10 @@ a {
   color: #000000;
   background: linear-gradient(180deg, #F4D59A, #C9964F 55%, #9A6A35);
   padding: 12px 22px;
+
+    display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .brand-name {
@@ -100,4 +104,10 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.btn-appeler svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
