@@ -136,3 +136,54 @@ a {
 .nav a:focus-visible::after {
   transform: scaleX(1);
 }
+
+.burger {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  background: none;
+  border: 1px solid rgba(201, 150, 79, 0.3);
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--or);
+}
+
+.m-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid rgba(201, 150, 79, 0.3);
+  padding: 14px 0 22px;
+}
+
+.m-menu a {
+  display: block;
+  text-align: center;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  padding: 12px;
+}
+
+@media (max-width: 759px) {
+  .nav {
+    display: none;
+  }
+
+    .burger {
+    display: flex;
+  }
+}
