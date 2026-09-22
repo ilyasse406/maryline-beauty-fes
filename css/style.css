@@ -462,3 +462,34 @@ a {
     padding: 70px;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .edge-t,
+  .edge-b {
+    animation: dessinerX 1.1s cubic-bezier(0.6, 0, 0.2, 1) both;
+  }
+
+  .edge-l,
+  .edge-r {
+    animation: dessinerY 1.1s cubic-bezier(0.6, 0, 0.2, 1) 0.15s both;
+  }
+
+  .coin {
+    animation: apparaitre 0.6s ease 0.9s both;
+  }
+}
+
+@keyframes dessinerX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes dessinerY {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+@keyframes apparaitre {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
