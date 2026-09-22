@@ -286,6 +286,114 @@
       </div>
     </section>
 
+    <!-- ==========================================================
+     SECTION TARIFS : tous les prix, rangés par catégorie
+     ========================================================== -->
+<section class="section" id="tarifs" aria-labelledby="tarifs-titre">
+  <div class="wrap">
+
+    <!-- Titre de section -->
+    <div class="sec-head">
+      <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
+      <h2 id="tarifs-titre" class="gold-text">Nos tarifs</h2>
+      <p>Toutes nos prestations, prix en dirhams.</p>
+    </div>
+
+    <!-- Onglets des catégories -->
+    <div class="tabs" role="tablist" aria-label="Catégories de prestations">
+      <button type="button" role="tab" id="onglet-coiffure" aria-controls="panneau-coiffure" aria-selected="true">Coiffure</button>
+      <button type="button" role="tab" id="onglet-onglerie" aria-controls="panneau-onglerie" aria-selected="false" tabindex="-1">Onglerie</button>
+      <button type="button" role="tab" id="onglet-visage" aria-controls="panneau-visage" aria-selected="false" tabindex="-1">Soins du visage</button>
+      <button type="button" role="tab" id="onglet-epilation" aria-controls="panneau-epilation" aria-selected="false" tabindex="-1">Épilation</button>
+      <button type="button" role="tab" id="onglet-cils" aria-controls="panneau-cils" aria-selected="false" tabindex="-1">Cils &amp; sourcils</button>
+    </div>
+
+    <!-- Contenu des onglets -->
+<div class="price-layout">
+
+  <!-- Visuel de la catégorie (ordinateur) -->
+  <div class="cat-visual" aria-hidden="true">
+    <div id="cat-label">Coiffure</div>
+  </div>
+
+  <div>
+    <!-- Panneau Coiffure -->
+    <div role="tabpanel" id="panneau-coiffure" aria-labelledby="onglet-coiffure">
+      <h3 class="sr-only">Tarifs coiffure</h3>
+      <ul class="plist">
+        <li><span>Brushing</span><span class="dots" aria-hidden="true"></span><b>40 DH</b></li>
+        <li><span>Coupe + brushing</span><span class="dots" aria-hidden="true"></span><b>100 DH</b></li>
+        <li><span>Coupe pointes</span><span class="dots" aria-hidden="true"></span><b>60 DH</b></li>
+        <li><span>Coloration</span><span class="dots" aria-hidden="true"></span><b>250 DH</b></li>
+        <li><span>Racines</span><span class="dots" aria-hidden="true"></span><b>150 DH</b></li>
+        <li><span>Coiffure</span><span class="dots" aria-hidden="true"></span><b>150 DH</b></li>
+        <li><span>Balayage</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 400 DH</b></li>
+        <li><span>Ombré</span><span class="dots" aria-hidden="true"></span><b>600 DH</b></li>
+        <li><span>Lissage kératine</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 550 DH</b></li>
+        <li><span>Protéine</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 600 DH</b></li>
+      </ul>
+    </div>
+
+    <!-- Panneau Onglerie -->
+    <div role="tabpanel" id="panneau-onglerie" aria-labelledby="onglet-onglerie" hidden>
+      <h3 class="sr-only">Tarifs onglerie</h3>
+      <ul class="plist">
+        <li><span>Manucure</span><span class="dots" aria-hidden="true"></span><b>80 DH</b></li>
+        <li><span>Pédicure</span><span class="dots" aria-hidden="true"></span><b>120 DH</b></li>
+        <li><span>Pédicure spa</span><span class="dots" aria-hidden="true"></span><b>165 DH</b></li>
+        <li><span>Pédicure spa Skintruth</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
+        <li><span>Pose gel</span><span class="dots" aria-hidden="true"></span><b>199 DH</b></li>
+        <li><span>Capsules gel</span><span class="dots" aria-hidden="true"></span><b>249 DH</b></li>
+        <li><span>Semi-permanent</span><span class="dots" aria-hidden="true"></span><b>80 DH</b></li>
+        <li><span>BIAB</span><span class="dots" aria-hidden="true"></span><b>100 DH</b></li>
+      </ul>
+    </div>
+
+    <!-- Panneau Soins du visage -->
+    <div role="tabpanel" id="panneau-visage" aria-labelledby="onglet-visage" hidden>
+      <h3 class="sr-only">Tarifs soins du visage</h3>
+      <ul class="plist">
+        <li><span>Soin visage complet</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 150 DH</b></li>
+        <li><span>Hydrafacial</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
+        <li><span>Aqua peeling</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
+        <li><span>Nettoyage profond</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
+      </ul>
+    </div>
+
+    <!-- Panneau Épilation -->
+    <div role="tabpanel" id="panneau-epilation" aria-labelledby="onglet-epilation" hidden>
+      <h3 class="sr-only">Tarifs épilation</h3>
+      <ul class="plist">
+        <li><span>Sourcils</span><span class="dots" aria-hidden="true"></span><b>30 DH</b></li>
+        <li><span>Lèvre supérieure</span><span class="dots" aria-hidden="true"></span><b>20 DH</b></li>
+        <li><span>Aisselles</span><span class="dots" aria-hidden="true"></span><b>30 DH</b></li>
+        <li><span>Bras</span><span class="dots" aria-hidden="true"></span><b>70 DH</b></li>
+        <li><span>Demi-bras</span><span class="dots" aria-hidden="true"></span><b>40 DH</b></li>
+        <li><span>Demi-jambes</span><span class="dots" aria-hidden="true"></span><b>50 DH</b></li>
+        <li><span>Jambes complètes</span><span class="dots" aria-hidden="true"></span><b>80 DH</b></li>
+        <li><span>Maillot intégral</span><span class="dots" aria-hidden="true"></span><b>70 DH</b></li>
+        <li><span>Épilation complète</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
+      </ul>
+    </div>
+
+    <!-- Panneau Cils & sourcils -->
+    <div role="tabpanel" id="panneau-cils" aria-labelledby="onglet-cils" hidden>
+      <h3 class="sr-only">Tarifs cils et sourcils</h3>
+      <ul class="plist">
+        <li><span>Pose cils à cils</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
+        <li><span>Effet naturel</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
+        <li><span>Rehaussement des cils</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
+        <li><span>Faux cils</span><span class="dots" aria-hidden="true"></span><b>50 DH</b></li>
+        <li><span>Teinture sourcils</span><span class="dots" aria-hidden="true"></span><b>50 DH</b></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
   </main>
 
 

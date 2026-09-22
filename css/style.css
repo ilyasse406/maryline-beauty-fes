@@ -1,3 +1,8 @@
+/* ============================================================
+   1. POLICES
+   ============================================================ */
+
+/* Cinzel : nom du salon, titres, boutons, menu */
 @font-face {
   font-family: "Cinzel";
   src: url("../fonts/cinzel-600.woff2") format("woff2");
@@ -14,6 +19,7 @@
   font-display: swap;
 }
 
+/* EB Garamond : texte courant */
 @font-face {
   font-family: "EB Garamond";
   src: url("../fonts/eb-garamond-400.woff2") format("woff2");
@@ -30,6 +36,7 @@
   font-display: swap;
 }
 
+/* Pinyon Script : calligraphie (slogan) */
 @font-face {
   font-family: "Pinyon Script";
   src: url("../fonts/pinyon-script-400.woff2") format("woff2");
@@ -38,18 +45,37 @@
   font-display: swap;
 }
 
+
+/* ============================================================
+   2. BASES : réglages généraux
+   ============================================================ */
+
+/* Le padding et la bordure sont comptés dans la largeur */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Espace sous l'en-tête collant quand on clique sur un lien du menu */
 html {
   scroll-padding-top: 80px;
 }
 
+/* Cache un élément à l'écran, mais le garde pour Google et les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-
+/* Couleurs de la charte */
 :root {
   --noir: #000000;
   --or: #C9964F;
@@ -57,10 +83,10 @@ html {
 }
 
 body {
+  margin: 0;
   background: var(--noir);
   color: var(--ivoire);
-  margin : 0;
-    font-family: "EB Garamond", Georgia, serif;
+  font-family: "EB Garamond", Georgia, serif;
   font-size: 18px;
   line-height: 1.6;
 }
@@ -70,34 +96,89 @@ a {
   text-decoration: none;
 }
 
+/* Texte en or métallique (réutilisable partout) */
+.gold-text {
+  background: linear-gradient(180deg, #F4D59A, #D6A560 45%, #9A6A35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ============================================================
+   3. BOUTONS
+   ============================================================ */
+
+/* Bouton principal : fond doré */
+.btn-appeler {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(180deg, #F4D59A, #C9964F 55%, #9A6A35);
+  color: #000000;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.btn-appeler svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Bouton secondaire : contour doré */
+.btn-contour {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border: 1px solid var(--or);
+  color: var(--or);
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.btn-contour svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+
+/* ============================================================
+   4. EN-TÊTE
+   ============================================================ */
+
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  border-bottom: 1px solid rgba(201, 150, 79, 0.3);
-    position: sticky;
-  top: 0;
-  z-index: 40;
   background: rgba(0, 0, 0, 0.88);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201, 150, 79, 0.3);
 }
 
-.nav {
-  display: flex;
-  gap: 24px;
-}
-
-
+/* Logo */
 .brand {
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 12px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
 }
 
+/* Monogramme MB à double anneau */
 .mono {
   width: 42px;
   height: 42px;
@@ -108,27 +189,6 @@ a {
   place-items: center;
   font-size: 16px;
   letter-spacing: -0.04em;
-}
-
-.nav a {
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 600;
-    position: relative;
-  padding: 8px 2px;
-}
-
-.btn-appeler {
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  color: #000000;
-  background: linear-gradient(180deg, #F4D59A, #C9964F 55%, #9A6A35);
-  padding: 12px 22px;
-
-    display: inline-flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .brand-name {
@@ -144,19 +204,20 @@ a {
   letter-spacing: 0.22em;
 }
 
-.gold-text {
-  background: linear-gradient(180deg, #F4D59A, #D6A560 45%, #9A6A35);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Menu ordinateur */
+.nav {
+  display: flex;
+  gap: 24px;
 }
 
-.btn-appeler svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+.nav a {
+  position: relative;
+  padding: 8px 2px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
 }
 
+/* Trait doré sous les liens au survol */
 .nav a::after {
   content: "";
   position: absolute;
@@ -174,6 +235,7 @@ a {
   transform: scaleX(1);
 }
 
+/* Bouton burger (caché sur ordinateur) */
 .burger {
   display: none;
   width: 46px;
@@ -193,9 +255,10 @@ a {
   width: 22px;
   height: 1.5px;
   background: var(--or);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Burger → croix quand le menu est ouvert */
 .burger[aria-expanded="true"] span:nth-child(1) {
   transform: translateY(7.5px) rotate(45deg);
 }
@@ -208,6 +271,7 @@ a {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
+/* Menu mobile déroulant */
 .m-menu {
   position: absolute;
   top: 100%;
@@ -228,133 +292,33 @@ a {
   padding: 12px;
 }
 
+/* Barre d'action mobile (cachée par défaut, affichée sur téléphone) */
 .m-bar {
   display: none;
 }
 
-.btn-contour {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  color: var(--or);
-  border: 1px solid var(--or);
-    padding: 12px 22px;
-}
 
-.btn-contour svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
+/* ============================================================
+   5. HERO
+   ============================================================ */
 
 .hero {
-  padding: 60px 20px;
-    position: relative;
+  position: relative;
   overflow: hidden;
+  padding: 60px 20px;
 }
 
-.hero-text {
-  text-align: center;
+/* Poussière d'or (canvas) */
+.dust {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 70%;
+  pointer-events: none;
 }
 
-.hero h1 {
-  margin: 0;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.wordmark {
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 700;
-  font-size: clamp(40px, 11vw, 72px);
-  line-height: 1;
-  letter-spacing: 0.04em;
-    margin-top: 18px;
-}
-
-.wordmark-sub {
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 600;
-  font-size: clamp(21px, 5.6vw, 34px);
-  letter-spacing: 0.14em;
-  margin-top: 4px;
-}
-
-.tagline {
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.26em;
-  color: var(--ivoire);
-  margin-top: 14px;
-    text-wrap: balance;
-}
-
-.slogan {
-  font-family: "Pinyon Script", cursive;
-  font-size: clamp(34px, 8vw, 50px);
-  line-height: 1.1;
-  color: var(--or);
-  margin: 22px 0 14px;
-    text-wrap: balance;
-}
-
-.hero-intro {
-  color: #BFAF96;
-  max-width: 30em;
-  margin: 0 auto 26px;
-  font-size: 17px;
-    text-wrap: balance;
-}
-
-.hero-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-
-.crown {
-  width: 74px;
-  height: 37px;
-  color: var(--or);
-}
-
-.hero .mono {
-  width: 84px;
-  height: 84px;
-  font-size: 32px;
-  margin-top: -4px;
-}
-
-.arch {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 4 / 5;
-  margin: 40px auto 0;
-  padding: 8px;
-  border: 1px solid var(--or);
-  border-radius: 999px 999px 0 0;
-}
-
-.arch-inner {
-  height: 100%;
-  border: 1px solid rgba(201, 150, 79, 0.4);
-  border-radius: 999px 999px 0 0;
-  background: radial-gradient(ellipse at 50% 30%, #3a2a18, #120c06 70%);
-  display: grid;
-  place-items: center;
-  color: #BFAF96;
-  font-style: italic;
-}
-
+/* Cadre art déco */
 .deco {
   position: relative;
   max-width: 1180px;
@@ -362,6 +326,7 @@ a {
   padding: 40px 20px;
 }
 
+/* Filets du cadre */
 .edge {
   position: absolute;
   background: var(--or);
@@ -387,6 +352,7 @@ a {
 .edge-l { left: 0; }
 .edge-r { right: 0; }
 
+/* Coins en filigrane (un dessin, retourné en miroir) */
 .coin {
   position: absolute;
   width: 46px;
@@ -399,16 +365,111 @@ a {
 .coin-bg { bottom: -6px; left: -6px; transform: scaleY(-1); }
 .coin-bd { bottom: -6px; right: -6px; transform: scale(-1); }
 
-.dust {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 65%;
-  height: 70%;
-  pointer-events: none;
-  
+/* Textes du hero */
+.hero-text {
+  text-align: center;
 }
 
+.hero h1 {
+  margin: 0;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crown {
+  width: 74px;
+  height: 37px;
+  color: var(--or);
+}
+
+.hero .mono {
+  width: 84px;
+  height: 84px;
+  font-size: 32px;
+  margin-top: -4px;
+}
+
+.wordmark {
+  margin-top: 18px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(40px, 11vw, 72px);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.wordmark-sub {
+  margin-top: 4px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(21px, 5.6vw, 34px);
+  letter-spacing: 0.14em;
+}
+
+.tagline {
+  margin-top: 14px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  color: var(--ivoire);
+  text-wrap: balance;
+}
+
+.slogan {
+  margin: 22px 0 14px;
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(34px, 8vw, 50px);
+  line-height: 1.1;
+  color: var(--or);
+  text-wrap: balance;
+}
+
+.hero-intro {
+  max-width: 30em;
+  margin: 0 auto 26px;
+  font-size: 17px;
+  color: #BFAF96;
+  text-wrap: balance;
+}
+
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Arche photo */
+.arch {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
+  margin: 40px auto 0;
+  padding: 8px;
+  border: 1px solid var(--or);
+  border-radius: 999px 999px 0 0;
+}
+
+.arch-inner {
+  height: 100%;
+  border: 1px solid rgba(201, 150, 79, 0.4);
+  border-radius: 999px 999px 0 0;
+  background: radial-gradient(ellipse at 50% 30%, #3a2a18, #120c06 70%);
+  display: grid;
+  place-items: center;
+  color: #BFAF96;
+  font-style: italic;
+}
+
+
+/* ============================================================
+   6. SECTIONS : éléments communs
+   ============================================================ */
+
+/* Conteneur centré à largeur limitée */
 .wrap {
   max-width: 1180px;
   margin: 0 auto;
@@ -420,6 +481,7 @@ a {
   border-top: 1px solid rgba(201, 150, 79, 0.18);
 }
 
+/* Titre de section */
 .sec-head {
   text-align: center;
   margin-bottom: 34px;
@@ -434,12 +496,13 @@ a {
 }
 
 .sec-head p {
-  color: #BFAF96;
   max-width: 34em;
   margin: 10px auto 0;
+  color: #BFAF96;
   text-wrap: balance;
 }
 
+/* Séparateur doré avec losange */
 .divider {
   display: flex;
   align-items: center;
@@ -466,6 +529,11 @@ a {
   fill: var(--or);
 }
 
+
+/* ============================================================
+   7. SECTION SOINS SIGNATURE
+   ============================================================ */
+
 .sig {
   list-style: none;
   margin: 0;
@@ -482,6 +550,7 @@ a {
   border-bottom: 1px solid rgba(201, 150, 79, 0.3);
 }
 
+/* Icône ronde */
 .p-icon {
   flex: none;
   width: 42px;
@@ -502,16 +571,18 @@ a {
   fill: url(#goldFill);
 }
 
+/* Nom du soin */
 .p-name {
   flex: 1;
+  min-width: 0;
   font-family: "Cinzel", "Times New Roman", serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-    min-width: 0;
 }
 
+/* Prix */
 .p-price {
   text-align: right;
   line-height: 1.1;
@@ -525,6 +596,7 @@ a {
   color: #BFAF96;
 }
 
+/* Étiquette dorée du prix */
 .pill {
   display: inline-block;
   padding: 4px 10px;
@@ -541,20 +613,128 @@ a {
   font-size: 11px;
 }
 
+
+/* ============================================================
+   8. SECTION TARIFS
+   ============================================================ */
+
+/* Onglets */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 4px;
+  border-bottom: 1px solid rgba(201, 150, 79, 0.3);
+}
+
+.tabs button {
+  position: relative;
+  padding: 12px 14px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #BFAF96;
+}
+
+/* Onglet actif */
+.tabs button[aria-selected="true"] {
+  color: #F4D59A;
+}
+
+.tabs button[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+  height: 2px;
+  background: var(--or);
+}
+
+/* Disposition : visuel + listes */
+.price-layout {
+  display: grid;
+  gap: 26px;
+  margin-top: 26px;
+}
+
+/* Visuel de la catégorie */
+.cat-visual {
+  aspect-ratio: 16 / 10;
+  padding: 7px;
+  border: 1px solid rgba(201, 150, 79, 0.3);
+}
+
+.cat-visual div {
+  height: 100%;
+  border: 1px solid rgba(201, 150, 79, 0.2);
+  background: radial-gradient(ellipse at 30% 20%, #3a2a18, #0e0905 75%);
+  display: grid;
+  place-items: center;
+  font-family: "Pinyon Script", cursive;
+  font-size: 40px;
+  color: var(--or);
+}
+
+/* Lignes de prix avec pointillés */
+.plist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plist li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 9px 0;
+  break-inside: avoid;
+}
+
+.dots {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 1px dotted #7A5128;
+  transform: translateY(-5px);
+}
+
+.plist b {
+  font-weight: 400;
+  color: var(--or);
+  white-space: nowrap;
+}
+
+.plist em {
+  font-size: 14px;
+  color: #BFAF96;
+}
+
+
+/* ============================================================
+   9. RESPONSIVE : TÉLÉPHONE (759px et moins)
+   ============================================================ */
+
 @media (max-width: 759px) {
+  /* En-tête : menu caché, burger visible */
   .nav {
     display: none;
   }
 
-    .burger {
+  .burger {
     display: flex;
   }
 
-    .site-header .btn-appeler {
+  /* Le bouton Appeler passe dans la barre du bas */
+  .site-header .btn-appeler {
     display: none;
   }
 
-    .m-bar {
+  /* Barre d'action fixée en bas de l'écran */
+  .m-bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -574,11 +754,13 @@ a {
     padding: 0 10px;
   }
 
+  /* Espace en bas pour que la barre ne cache pas la fin de la page */
   body {
     padding-bottom: 76px;
   }
 
-    .hero {
+  /* Hero plus compact */
+  .hero {
     padding: 28px 12px 40px;
   }
 
@@ -587,7 +769,13 @@ a {
   }
 }
 
+
+/* ============================================================
+   10. RESPONSIVE : ORDINATEUR (900px et plus)
+   ============================================================ */
+
 @media (min-width: 900px) {
+  /* Hero : photo à gauche, texte à droite */
   .hero {
     padding: 80px 40px;
   }
@@ -606,16 +794,58 @@ a {
     margin: 0;
   }
 
-    .deco {
+  .deco {
     padding: 70px;
   }
-    .sig {
+
+  /* Soins : 2 colonnes */
+  .sig {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+  }
+
+  /* Tarifs : listes sur 2 colonnes */
+  .plist {
+    columns: 2;
     column-gap: 40px;
   }
 }
 
+
+/* ============================================================
+   11. RESPONSIVE : GRAND ÉCRAN (1100px et plus)
+   ============================================================ */
+
+@media (min-width: 1100px) {
+  /* Soins : 3 colonnes */
+  .sig {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Tarifs : visuel à gauche, prix à droite */
+  .price-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 50px;
+    align-items: start;
+  }
+
+  .cat-visual {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+
+/* ============================================================
+   12. ANIMATIONS (seulement si la visiteuse ne les a pas désactivées)
+   ============================================================ */
+
 @media (prefers-reduced-motion: no-preference) {
+  /* Défilement doux vers les sections */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Entrée du hero : le cadre se dessine */
   .edge-t,
   .edge-b {
     animation: dessinerX 1.1s cubic-bezier(0.6, 0, 0.2, 1) both;
@@ -630,7 +860,8 @@ a {
     animation: apparaitre 0.6s ease 0.9s both;
   }
 
-    .arch {
+  /* Entrée du hero : l'arche monte, la couronne se pose */
+  .arch {
     animation: monter 1s ease 0.5s both;
   }
 
@@ -642,6 +873,7 @@ a {
     animation: apparaitre 0.7s ease 1.1s both;
   }
 
+  /* Entrée du hero : les textes apparaissent en cascade */
   .tagline,
   .slogan,
   .hero-intro,
@@ -654,7 +886,8 @@ a {
   .hero-intro { animation-delay: 2.1s; }
   .hero-btns  { animation-delay: 2.25s; }
 
-    .shimmer {
+  /* Reflet de lumière sur le nom du salon */
+  .shimmer {
     background:
       linear-gradient(110deg, transparent 35%, rgba(255, 243, 209, 0.9) 50%, transparent 65%),
       linear-gradient(180deg, #F4D59A, #D6A560 45%, #9A6A35);
@@ -664,43 +897,44 @@ a {
     background-clip: text;
     animation: reflet 2.2s ease 1.3s both;
   }
-
-    html {
-    scroll-behavior: smooth;
-  }
 }
 
-@media (min-width: 1100px) {
-    .sig {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
 
+/* ============================================================
+   13. RECETTES D'ANIMATION (@keyframes)
+   ============================================================ */
+
+/* Filet qui s'étire horizontalement */
 @keyframes dessinerX {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
 
+/* Filet qui s'étire verticalement */
 @keyframes dessinerY {
   from { transform: scaleY(0); }
   to   { transform: scaleY(1); }
 }
 
+/* Fondu d'apparition */
 @keyframes apparaitre {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
+/* Monte en apparaissant (arche) */
 @keyframes monter {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: none; }
 }
 
+/* Descend en apparaissant, avec rebond (couronne) */
 @keyframes poser {
   from { opacity: 0; transform: translateY(-14px); }
   to   { opacity: 1; transform: none; }
 }
 
+/* Reflet qui traverse le texte */
 @keyframes reflet {
   from { background-position: 100% 0, 0 0; }
   to   { background-position: 0 0, 0 0; }

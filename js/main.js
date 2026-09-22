@@ -83,3 +83,36 @@ new IntersectionObserver(([entree]) => {
 }).observe(document.getElementById("hero"));
 
 requestAnimationFrame(dessinerPaillettes);
+
+/* ============================================================
+   ONGLETS DES TARIFS
+   ============================================================ */
+
+const onglets = document.querySelectorAll('[role="tab"]');
+const etiquetteCategorie = document.getElementById("cat-label");
+
+function activerOnglet(onglet, donnerFocus) {
+  onglets.forEach((o) => {
+    const actif = o === onglet;
+    o.setAttribute("aria-selected", String(actif));
+    o.tabIndex = actif ? 0 : -1;
+    document.getElementById(o.getAttribute("aria-controls")).hidden = !actif;
+  });
+
+  etiquetteCategorie.textContent = onglet.textContent;
+
+  if (donnerFocus) onglet.focus();
+}
+
+onglets.forEach((onglet, index) => {
+  onglet.addEventListener("click", () => activerOnglet(onglet, false));
+
+  onglet.addEventListener("keydown", (evenement) => {
+    if (evenement.key === "ArrowRight") {
+      activerOnglet(onglets[(index + 1) % onglets.length], true);
+    }
+    if (evenement.key === "ArrowLeft") {
+      activerOnglet(onglets[(index - 1 + onglets.length) % onglets.length], true);
+    }
+  });
+});
