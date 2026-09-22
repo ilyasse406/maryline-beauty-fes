@@ -38,6 +38,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 
 :root {
@@ -320,6 +326,27 @@ a {
   margin-top: -4px;
 }
 
+.arch {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
+  margin: 40px auto 0;
+  padding: 8px;
+  border: 1px solid var(--or);
+  border-radius: 999px 999px 0 0;
+}
+
+.arch-inner {
+  height: 100%;
+  border: 1px solid rgba(201, 150, 79, 0.4);
+  border-radius: 999px 999px 0 0;
+  background: radial-gradient(ellipse at 50% 30%, #3a2a18, #120c06 70%);
+  display: grid;
+  place-items: center;
+  color: #BFAF96;
+  font-style: italic;
+}
+
 @media (max-width: 759px) {
   .nav {
     display: none;
@@ -355,5 +382,25 @@ a {
 
   body {
     padding-bottom: 76px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .arch {
+    order: -1;
+    margin: 0;
   }
 }
