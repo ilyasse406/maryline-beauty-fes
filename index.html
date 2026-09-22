@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+<!-- ============================================================
+     HEAD : réglages invisibles (SEO, partage, polices, styles)
+     ============================================================ -->
 <head>
+  <!-- Bases : accents et affichage mobile -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+  <!-- SEO principal : titre et description dans Google -->
   <title>Maryline Beauty Fès | Salon de coiffure et institut de beauté à Fès</title>
   <meta name="description" content="Salon esthétique et coiffure pour femmes à Fès : lissage kératine, balayage, soins Olaplex, Hydrafacial, pose gel, cils à cils et Pack Mariée. Tarifs et contact.">
+  <!-- À REMPLACER : VOTRE-DOMAINE.ma par le vrai nom de domaine -->
   <link rel="canonical" href="https://VOTRE-DOMAINE.ma/">
 
+  <!-- Icônes : onglet, iPhone, Android -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#000000">
 
+  <!-- Open Graph : aperçu lors du partage (WhatsApp, Facebook, Instagram) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_MA">
   <meta property="og:site_name" content="Maryline Beauty Fès">
@@ -25,10 +34,12 @@
   <meta property="og:image:alt" content="Salon Maryline Beauty à Fès">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Performance : police prioritaire, styles, script -->
   <link rel="preload" href="fonts/cinzel-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 
+  <!-- Données structurées : fiche entreprise locale pour Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,19 +64,29 @@
   </script>
 </head>
 
-<body>
+<body id="top">
+
+  <!-- ============================================================
+       SYMBOLES SVG : boîte à icônes invisible, réutilisée avec <use>
+       ============================================================ -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
+    <!-- Icônes de contact -->
     <symbol id="phone" viewBox="0 0 24 24">
       <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>
     </symbol>
     <symbol id="insta" viewBox="0 0 24 24">
       <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
     </symbol>
+
+    <!-- Dégradé or métallique (utilisé par la couronne et les icônes de soins) -->
     <linearGradient id="goldFill" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#F4D59A"/>
       <stop offset=".55" stop-color="#C9964F"/>
       <stop offset="1" stop-color="#7A5128"/>
     </linearGradient>
+
+    <!-- Ornements : couronne, coin art déco, losange -->
     <symbol id="crown" viewBox="0 0 80 40">
       <path d="M10 31 L5 11 L24 22 L40 5 L56 22 L75 11 L70 31 Z" fill="url(#goldFill)"/>
       <path d="M9 36 H71" stroke="currentColor" stroke-width="2"/>
@@ -75,25 +96,40 @@
       <path d="M40 17 L44 22 L40 27 L36 22Z" fill="#000"/>
     </symbol>
     <symbol id="corner" viewBox="0 0 60 60">
-  <g fill="none" stroke="currentColor" stroke-width="1.3">
-    <path d="M2 58 V16 Q2 2 16 2 H58"/>
-    <path d="M9 58 V22 Q9 9 22 9 H58" opacity=".55"/>
-    <path d="M16 16 q10 -2 12 6 q1 6 -5 6 q-4 0 -3 -4"/>
-  </g>
-  <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
-</symbol>
+      <g fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M2 58 V16 Q2 2 16 2 H58"/>
+        <path d="M9 58 V22 Q9 9 22 9 H58" opacity=".55"/>
+        <path d="M16 16 q10 -2 12 6 q1 6 -5 6 q-4 0 -3 -4"/>
+      </g>
+      <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="diamond" viewBox="0 0 12 12">
+      <path d="M6 0 L12 6 L6 12 L0 6Z"/>
+    </symbol>
 
-<symbol id="diamond" viewBox="0 0 12 12">
-  <path d="M6 0 L12 6 L6 12 L0 6Z"/>
-</symbol>
+    <!-- Icônes des soins -->
+    <symbol id="drop" viewBox="0 0 20 20"><path d="M10 1 C10 1 3 9 3 13 a7 7 0 0 0 14 0 C17 9 10 1 10 1Z"/></symbol>
+    <symbol id="gem" viewBox="0 0 20 20"><path d="M5 3 H15 L19 8 L10 18 L1 8Z"/></symbol>
+    <symbol id="bottle" viewBox="0 0 20 20"><path d="M8 1 H12 V5 L14 7 V19 H6 V7 L8 5Z"/></symbol>
+    <symbol id="polish" viewBox="0 0 20 20"><path d="M9 1 H11 V7 H13 V9 L15 11 V19 H5 V11 L7 9 V7 H9Z"/></symbol>
+    <symbol id="eye" viewBox="0 0 20 20"><path d="M1 10 Q10 2 19 10 Q10 18 1 10Z M10 7 a3 3 0 1 0 0.01 0Z" fill-rule="evenodd"/></symbol>
+    <symbol id="wave" viewBox="0 0 20 20"><path d="M6 1 C2 5 10 8 6 12 C3 15 6 18 8 19 L10 19 C8 17 6 15 9 12 C13 8 5 5 9 1Z M12 1 C8 5 16 8 12 12 C9 15 12 18 14 19 L16 19 C14 17 12 15 15 12 C19 8 11 5 15 1Z"/></symbol>
+    <symbol id="nail" viewBox="0 0 20 20"><path d="M6 19 V8 a4 4 0 0 1 8 0 V19Z M8 8 a2 2 0 0 1 4 0 V11 H8Z" fill-rule="evenodd"/></symbol>
   </svg>
 
-  <header class="site-header" id="top">
+
+  <!-- ============================================================
+       EN-TÊTE : logo, menu, bouton Appeler, burger mobile
+       ============================================================ -->
+  <header class="site-header">
+
+    <!-- Logo : monogramme + nom -->
     <a class="brand" href="#top" aria-label="Maryline Beauty Fès, retour en haut de page">
       <span class="mono gold-text" aria-hidden="true">MB</span>
       <span class="brand-name gold-text" aria-hidden="true">Maryline<small>Beauty Fès</small></span>
     </a>
 
+    <!-- Menu ordinateur et tablette -->
     <nav class="nav" aria-label="Navigation principale">
       <a href="#soins">Soins</a>
       <a href="#tarifs">Tarifs</a>
@@ -102,17 +138,20 @@
       <a href="#contact">Contact</a>
     </nav>
 
+    <!-- Bouton Appeler (caché sur mobile, remplacé par la barre du bas) -->
     <a class="btn-appeler" href="tel:+212665108043">
       <svg aria-hidden="true"><use href="#phone"/></svg>
       Appeler
     </a>
 
+    <!-- Bouton burger (mobile uniquement) -->
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Menu mobile (ouvert par le burger) -->
     <nav class="m-menu" id="menu-mobile" aria-label="Menu mobile" hidden>
       <a href="#soins">Soins</a>
       <a href="#tarifs">Tarifs</a>
@@ -122,56 +161,137 @@
     </nav>
   </header>
 
-  <main id="contenu">
-    <section class="hero" id="hero" aria-label="Accueil">
-        <canvas class="dust" id="dust" aria-hidden="true"></canvas>
-    <div class="deco">
-    <span class="edge edge-t"></span>
-    <span class="edge edge-b"></span>
-    <span class="edge edge-l"></span>
-    <span class="edge edge-r"></span>
-    <svg class="coin coin-hg" aria-hidden="true"><use href="#corner"/></svg>
-    <svg class="coin coin-hd" aria-hidden="true"><use href="#corner"/></svg>
-    <svg class="coin coin-bg" aria-hidden="true"><use href="#corner"/></svg>
-    <svg class="coin coin-bd" aria-hidden="true"><use href="#corner"/></svg>
 
-    <div class="hero-grid">
-      <div class="hero-text">
-        <h1>
-          <svg class="crown" aria-hidden="true"><use href="#crown"/></svg>
-          <span class="mono gold-text" aria-hidden="true">MB</span>
-          <span class="wordmark gold-text shimmer">Maryline</span>
-          <span class="wordmark-sub gold-text shimmer">Beauty Fès</span>
-          <span class="tagline">Salon esthétique &amp; coiffure à Fès</span>
-        </h1>
-        <p class="slogan">Votre beauté est notre art</p>
-        <p class="hero-intro">Coiffure, soins cheveux, onglerie, soins du visage et cils, dans un salon réservé aux femmes.</p>
-        <div class="hero-btns">
-          <a class="btn-appeler" href="tel:+212665108043">
-            <svg aria-hidden="true"><use href="#phone"/></svg>
-            Appeler
-          </a>
-          <a class="btn-contour" href="#tarifs">Voir les tarifs</a>
+  <!-- ============================================================
+       CONTENU PRINCIPAL
+       ============================================================ -->
+  <main id="contenu">
+
+    <!-- ==========================================================
+         SECTION HERO : première impression (nom, slogan, photo)
+         ========================================================== -->
+    <section class="hero" id="hero" aria-label="Accueil">
+
+      <!-- Poussière d'or animée (dessinée en JavaScript) -->
+      <canvas class="dust" id="dust" aria-hidden="true"></canvas>
+
+      <!-- Cadre art déco -->
+      <div class="deco">
+        <!-- Filets du cadre (haut, bas, gauche, droite) -->
+        <span class="edge edge-t"></span>
+        <span class="edge edge-b"></span>
+        <span class="edge edge-l"></span>
+        <span class="edge edge-r"></span>
+        <!-- Coins en filigrane (haut-gauche, haut-droit, bas-gauche, bas-droit) -->
+        <svg class="coin coin-hg" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="coin coin-hd" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="coin coin-bg" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="coin coin-bd" aria-hidden="true"><use href="#corner"/></svg>
+
+        <div class="hero-grid">
+
+          <!-- Textes du hero -->
+          <div class="hero-text">
+            <h1>
+              <svg class="crown" aria-hidden="true"><use href="#crown"/></svg>
+              <span class="mono gold-text" aria-hidden="true">MB</span>
+              <span class="wordmark gold-text shimmer">Maryline</span>
+              <span class="wordmark-sub gold-text shimmer">Beauty Fès</span>
+              <span class="tagline">Salon esthétique &amp; coiffure à Fès</span>
+            </h1>
+            <p class="slogan">Votre beauté est notre art</p>
+            <p class="hero-intro">Coiffure, soins cheveux, onglerie, soins du visage et cils, dans un salon réservé aux femmes.</p>
+            <div class="hero-btns">
+              <a class="btn-appeler" href="tel:+212665108043">
+                <svg aria-hidden="true"><use href="#phone"/></svg>
+                Appeler
+              </a>
+              <a class="btn-contour" href="#tarifs">Voir les tarifs</a>
+            </div>
+          </div>
+
+          <!-- Arche photo (À REMPLACER par la vraie photo du salon) -->
+          <div class="arch">
+            <div class="arch-inner">Photo du salon</div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="arch">
-        <div class="arch-inner">Photo du salon</div>
+
+    <!-- ==========================================================
+         SECTION SOINS SIGNATURE : soins phares avec prix
+         ========================================================== -->
+    <section class="section" id="soins" aria-labelledby="soins-titre">
+      <div class="wrap">
+
+        <!-- Titre de section -->
+        <div class="sec-head">
+          <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
+          <h2 id="soins-titre" class="gold-text">Soins signature</h2>
+          <p>Nos soins cheveux phares et nos poses les plus demandées.</p>
+        </div>
+
+        <!-- Liste des soins -->
+        <ul class="sig">
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#drop"/></svg></span>
+            <span class="p-name">CCRP</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">300 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#gem"/></svg></span>
+            <span class="p-name">Protéine Black Diamant</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">550 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true">PKC</span>
+            <span class="p-name">PKC</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">450 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#bottle"/></svg></span>
+            <span class="p-name">Soin cheveux Olaplex</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">400 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#bottle"/></svg></span>
+            <span class="p-name">Soin L'Oréal Professionnel</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">150 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#wave"/></svg></span>
+            <span class="p-name">Cheveux Wivi</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">100 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#polish"/></svg></span>
+            <span class="p-name">Vernis permanent</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">80 <span>DH</span></span></span>
+          </li>
+          <li>
+            <!-- À CONFIRMER avec la cliente : "Faux angle" sur l'affiche -->
+            <span class="p-icon" aria-hidden="true"><svg><use href="#nail"/></svg></span>
+            <span class="p-name">Faux ongles</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">150 <span>DH</span></span></span>
+          </li>
+          <li>
+            <span class="p-icon" aria-hidden="true"><svg><use href="#eye"/></svg></span>
+            <span class="p-name">Pose cils à cils permanent</span>
+            <span class="p-price"><small>à partir de</small><span class="pill">200 <span>DH</span></span></span>
+          </li>
+        </ul>
+
       </div>
-    </div>
-  </div>
-</section>
-<section class="section" id="soins" aria-labelledby="soins-titre">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
-      <h2 id="soins-titre" class="gold-text">Soins signature</h2>
-      <p>Nos soins cheveux phares et nos poses les plus demandées.</p>
-    </div>
-  </div>
-</section>
+    </section>
+
   </main>
 
+
+  <!-- ============================================================
+       BARRE D'ACTION MOBILE : fixée en bas de l'écran (mobile uniquement)
+       ============================================================ -->
   <div class="m-bar">
     <a class="btn-appeler" href="tel:+212665108043">
       <svg aria-hidden="true"><use href="#phone"/></svg>
@@ -182,5 +302,6 @@
       Instagram
     </a>
   </div>
+
 </body>
 </html>
