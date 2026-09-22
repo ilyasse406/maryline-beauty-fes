@@ -222,7 +222,7 @@ a {
   display: none;
 }
 
-.btn-insta {
+.btn-contour {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -233,9 +233,10 @@ a {
   letter-spacing: 0.1em;
   color: var(--or);
   border: 1px solid var(--or);
+    padding: 12px 22px;
 }
 
-.btn-insta svg {
+.btn-contour svg {
   width: 16px;
   height: 16px;
   fill: currentColor;
@@ -280,6 +281,7 @@ a {
   letter-spacing: 0.26em;
   color: var(--ivoire);
   margin-top: 14px;
+    text-wrap: balance;
 }
 
 .slogan {
@@ -295,6 +297,13 @@ a {
   max-width: 30em;
   margin: 0 auto 26px;
   font-size: 17px;
+}
+
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
 @media (max-width: 759px) {
