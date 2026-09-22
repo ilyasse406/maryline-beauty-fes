@@ -61,6 +61,19 @@
     <symbol id="insta" viewBox="0 0 24 24">
       <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
     </symbol>
+    <linearGradient id="goldFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4D59A"/>
+      <stop offset=".55" stop-color="#C9964F"/>
+      <stop offset="1" stop-color="#7A5128"/>
+    </linearGradient>
+    <symbol id="crown" viewBox="0 0 80 40">
+      <path d="M10 31 L5 11 L24 22 L40 5 L56 22 L75 11 L70 31 Z" fill="url(#goldFill)"/>
+      <path d="M9 36 H71" stroke="currentColor" stroke-width="2"/>
+      <circle cx="5" cy="9" r="3" fill="currentColor"/>
+      <circle cx="40" cy="4" r="3.4" fill="currentColor"/>
+      <circle cx="75" cy="9" r="3" fill="currentColor"/>
+      <path d="M40 17 L44 22 L40 27 L36 22Z" fill="#000"/>
+    </symbol>
   </svg>
 
   <header class="site-header" id="top">
@@ -97,27 +110,28 @@
     </nav>
   </header>
 
-  
   <main id="contenu">
-  <section class="hero" id="hero" aria-label="Accueil">
-    <div class="hero-text">
-      <h1>
-        <span class="wordmark gold-text">Maryline</span>
-        <span class="wordmark-sub gold-text">Beauty Fès</span>
-        <span class="tagline">Salon esthétique &amp; coiffure à Fès</span>
-      </h1>
-      <p class="slogan">Votre beauté est notre art</p>
-      <p class="hero-intro">Coiffure, soins cheveux, onglerie, soins du visage et cils, dans un salon réservé aux femmes.</p>
-      <div class="hero-btns">
-  <a class="btn-appeler" href="tel:+212665108043">
-    <svg aria-hidden="true"><use href="#phone"/></svg>
-    Appeler
-  </a>
-  <a class="btn-contour" href="#tarifs">Voir les tarifs</a>
-</div>
-    </div>
-  </section>
-</main>
+    <section class="hero" id="hero" aria-label="Accueil">
+      <div class="hero-text">
+        <h1>
+          <svg class="crown" aria-hidden="true"><use href="#crown"/></svg>
+          <span class="mono gold-text" aria-hidden="true">MB</span>
+          <span class="wordmark gold-text">Maryline</span>
+          <span class="wordmark-sub gold-text">Beauty Fès</span>
+          <span class="tagline">Salon esthétique &amp; coiffure à Fès</span>
+        </h1>
+        <p class="slogan">Votre beauté est notre art</p>
+        <p class="hero-intro">Coiffure, soins cheveux, onglerie, soins du visage et cils, dans un salon réservé aux femmes.</p>
+        <div class="hero-btns">
+          <a class="btn-appeler" href="tel:+212665108043">
+            <svg aria-hidden="true"><use href="#phone"/></svg>
+            Appeler
+          </a>
+          <a class="btn-contour" href="#tarifs">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div class="m-bar">
     <a class="btn-appeler" href="tel:+212665108043">
