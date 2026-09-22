@@ -250,6 +250,8 @@ a {
 
 .hero {
   padding: 60px 20px;
+    position: relative;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -392,6 +394,16 @@ a {
 .coin-hd { top: -6px; right: -6px; transform: scaleX(-1); }
 .coin-bg { bottom: -6px; left: -6px; transform: scaleY(-1); }
 .coin-bd { bottom: -6px; right: -6px; transform: scale(-1); }
+
+.dust {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 70%;
+  pointer-events: none;
+  
+}
 
 @media (max-width: 759px) {
   .nav {
