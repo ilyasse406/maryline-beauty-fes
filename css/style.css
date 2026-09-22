@@ -713,6 +713,103 @@ a {
   color: #BFAF96;
 }
 
+/* ============================================================
+   8 bis. SECTION PACK MARIÉE
+   ============================================================ */
+
+.bridal {
+  display: grid;
+  gap: 22px;
+}
+
+/* Cadres photo */
+.photo {
+  aspect-ratio: 4 / 3;
+  padding: 7px;
+  border: 1px solid rgba(201, 150, 79, 0.3);
+}
+
+.photo div {
+  height: 100%;
+  border: 1px solid rgba(201, 150, 79, 0.2);
+  background: radial-gradient(ellipse at 50% 25%, #3d2c1a, #0e0905 72%);
+  display: grid;
+  place-items: end center;
+  padding: 16px;
+  font-style: italic;
+  font-size: 15px;
+  color: #BFAF96;
+}
+
+/* La 2e photo est cachée sur petit écran */
+.bridal .photo:last-child {
+  display: none;
+}
+
+/* Carte centrale, façon faire-part */
+.card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding: 34px 24px;
+  background: #15110C;
+  border: 1px solid rgba(201, 150, 79, 0.4);
+  text-align: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(201, 150, 79, 0.2);
+  pointer-events: none;
+}
+
+.card h2 {
+  margin: 0;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(28px, 6vw, 38px);
+  line-height: 1.15;
+}
+
+.script {
+  margin: 4px 0 10px;
+  font-family: "Pinyon Script", cursive;
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--or);
+}
+
+/* Liste des 2 prix */
+.bridal-prices {
+  list-style: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 6px 0 22px;
+  padding: 0;
+}
+
+.bridal-prices li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(201, 150, 79, 0.2);
+}
+
+.bridal-prices li:last-child {
+  border-bottom: 0;
+}
+
+.bridal-prices b {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  color: var(--or);
+  white-space: nowrap;
+}
+
 
 /* ============================================================
    9. RESPONSIVE : TÉLÉPHONE (759px et moins)
@@ -809,6 +906,16 @@ a {
     columns: 2;
     column-gap: 40px;
   }
+
+    /* Pack Mariée : photo + carte */
+  .bridal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo {
+    aspect-ratio: auto;
+    min-height: 320px;
+  }
 }
 
 
@@ -831,6 +938,16 @@ a {
 
   .cat-visual {
     aspect-ratio: 3 / 4;
+  }
+
+    /* Pack Mariée : photo + carte + photo */
+  .bridal {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .bridal .photo:last-child {
+    display: block;
   }
 }
 
