@@ -297,6 +297,7 @@ a {
   line-height: 1.1;
   color: var(--or);
   margin: 22px 0 14px;
+    text-wrap: balance;
 }
 
 .hero-intro {
@@ -304,6 +305,7 @@ a {
   max-width: 30em;
   margin: 0 auto 26px;
   font-size: 17px;
+    text-wrap: balance;
 }
 
 .hero-btns {
@@ -347,6 +349,50 @@ a {
   font-style: italic;
 }
 
+.deco {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.edge {
+  position: absolute;
+  background: var(--or);
+  opacity: 0.8;
+}
+
+.edge-t,
+.edge-b {
+  height: 1px;
+  left: 30px;
+  right: 30px;
+}
+
+.edge-l,
+.edge-r {
+  width: 1px;
+  top: 30px;
+  bottom: 30px;
+}
+
+.edge-t { top: 0; }
+.edge-b { bottom: 0; }
+.edge-l { left: 0; }
+.edge-r { right: 0; }
+
+.coin {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  color: var(--or);
+}
+
+.coin-hg { top: -6px; left: -6px; }
+.coin-hd { top: -6px; right: -6px; transform: scaleX(-1); }
+.coin-bg { bottom: -6px; left: -6px; transform: scaleY(-1); }
+.coin-bd { bottom: -6px; right: -6px; transform: scale(-1); }
+
 @media (max-width: 759px) {
   .nav {
     display: none;
@@ -383,6 +429,14 @@ a {
   body {
     padding-bottom: 76px;
   }
+
+    .hero {
+    padding: 28px 12px 40px;
+  }
+
+  .deco {
+    padding: 34px 16px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -402,5 +456,9 @@ a {
   .arch {
     order: -1;
     margin: 0;
+  }
+
+    .deco {
+    padding: 70px;
   }
 }
