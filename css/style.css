@@ -14,6 +14,30 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../fonts/eb-garamond-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../fonts/eb-garamond-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pinyon Script";
+  src: url("../fonts/pinyon-script-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 :root {
@@ -26,6 +50,9 @@ body {
   background: var(--noir);
   color: var(--ivoire);
   margin : 0;
+    font-family: "EB Garamond", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 a {
@@ -212,6 +239,62 @@ a {
   width: 16px;
   height: 16px;
   fill: currentColor;
+}
+
+.hero {
+  padding: 60px 20px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wordmark {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(40px, 11vw, 72px);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.wordmark-sub {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(21px, 5.6vw, 34px);
+  letter-spacing: 0.14em;
+  margin-top: 4px;
+}
+
+.tagline {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  color: var(--ivoire);
+  margin-top: 14px;
+}
+
+.slogan {
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(34px, 8vw, 50px);
+  line-height: 1.1;
+  color: var(--or);
+  margin: 22px 0 14px;
+}
+
+.hero-intro {
+  color: #BFAF96;
+  max-width: 30em;
+  margin: 0 auto 26px;
+  font-size: 17px;
 }
 
 @media (max-width: 759px) {
