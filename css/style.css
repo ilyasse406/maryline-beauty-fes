@@ -995,6 +995,9 @@ a {
     repeating-linear-gradient(0deg, rgba(201, 150, 79, 0.06) 0 1px, transparent 1px 34px),
     repeating-linear-gradient(90deg, rgba(201, 150, 79, 0.06) 0 1px, transparent 1px 34px),
     #0e0905;
+      width: 100%;
+  border: 0;
+  filter: grayscale(0.3) brightness(0.85);
 }
 
 .map-box svg {
