@@ -741,9 +741,23 @@ a {
   color: #BFAF96;
 }
 
-/* La 2e photo est cachée sur petit écran */
-.bridal .photo:last-child {
+/* Carrousel des photos (mobile) */
+.bridal-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.bridal-slider::-webkit-scrollbar {
   display: none;
+}
+
+.bridal-slider .photo {
+  scroll-snap-align: center;
 }
 
 /* Carte centrale, façon faire-part */
@@ -1178,9 +1192,14 @@ a {
     column-gap: 40px;
   }
 
-    /* Pack Mariée : photo + carte */
+  /* Pack Mariée : photo + carte */
   .bridal {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bridal-slider .photo {
+    aspect-ratio: auto;
+    min-height: 320px;
   }
 
   .photo {
@@ -1226,14 +1245,19 @@ a {
     aspect-ratio: 3 / 4;
   }
 
-    /* Pack Mariée : photo + carte + photo */
+  /* Pack Mariée : photo + carte + photo */
   .bridal {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
     gap: 28px;
   }
 
-  .bridal .photo:last-child {
-    display: block;
+  /* Le carrousel redevient deux photos séparées, de chaque côté */
+  .bridal-slider {
+    display: contents;
+  }
+
+  .bridal-slider .photo:last-child {
+    order: 1;
   }
 
     /* Contact : 3 colonnes */
