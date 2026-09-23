@@ -1,598 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<!-- ============================================================
+  <!-- ============================================================
      HEAD : réglages invisibles (SEO, partage, polices, styles)
      ============================================================ -->
-<head>
-  <!-- Bases : accents et affichage mobile -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <head>
+    <!-- Bases : accents et affichage mobile -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
-  <!-- SEO principal : titre et description dans Google -->
-  <title>Maryline Beauty Fès | Salon de coiffure et institut de beauté à Fès</title>
-  <meta name="description" content="Salon esthétique et coiffure pour femmes à Fès : lissage kératine, balayage, soins Olaplex, Hydrafacial, pose gel, cils à cils et Pack Mariée. Tarifs et contact.">
-  <!-- À REMPLACER : VOTRE-DOMAINE.ma par le vrai nom de domaine -->
-  <link rel="canonical" href="https://VOTRE-DOMAINE.ma/">
+    <!-- SEO principal : titre et description dans Google -->
+    <title>
+      Maryline Beauty Fès | Salon de coiffure et institut de beauté à Fès
+    </title>
+    <meta
+      name="description"
+      content="Salon esthétique et coiffure pour femmes à Fès : lissage kératine, balayage, soins Olaplex, Hydrafacial, pose gel, cils à cils et Pack Mariée. Tarifs et contact."
+    />
+    <!-- À REMPLACER : VOTRE-DOMAINE.ma par le vrai nom de domaine -->
+    <link rel="canonical" href="https://VOTRE-DOMAINE.ma/" />
 
-  <!-- Icônes : onglet, iPhone, Android -->
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#000000">
+    <!-- Icônes : onglet, iPhone, Android -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#000000" />
 
-  <!-- Open Graph : aperçu lors du partage (WhatsApp, Facebook, Instagram) -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_MA">
-  <meta property="og:site_name" content="Maryline Beauty Fès">
-  <meta property="og:title" content="Maryline Beauty Fès — Salon esthétique & coiffure">
-  <meta property="og:description" content="Coiffure, soins cheveux, onglerie, soins du visage, cils et Pack Mariée à Fès.">
-  <meta property="og:url" content="https://VOTRE-DOMAINE.ma/">
-  <meta property="og:image" content="https://VOTRE-DOMAINE.ma/images/partage/maryline-beauty-fes.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Salon Maryline Beauty à Fès">
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- Open Graph : aperçu lors du partage (WhatsApp, Facebook, Instagram) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_MA" />
+    <meta property="og:site_name" content="Maryline Beauty Fès" />
+    <meta
+      property="og:title"
+      content="Maryline Beauty Fès — Salon esthétique & coiffure"
+    />
+    <meta
+      property="og:description"
+      content="Coiffure, soins cheveux, onglerie, soins du visage, cils et Pack Mariée à Fès."
+    />
+    <meta property="og:url" content="https://VOTRE-DOMAINE.ma/" />
+    <meta
+      property="og:image"
+      content="https://VOTRE-DOMAINE.ma/images/partage/maryline-beauty-fes.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Salon Maryline Beauty à Fès" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Performance : police prioritaire, styles, script -->
-  <link rel="preload" href="fonts/cinzel-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+    <!-- Performance : police prioritaire, styles, script -->
+    <link
+      rel="preload"
+      href="fonts/cinzel-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
 
-  <!-- Données structurées : fiche entreprise locale pour Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["BeautySalon", "HairSalon"],
-    "@id": "https://VOTRE-DOMAINE.ma/#salon",
-    "name": "Maryline Beauty Fès",
-    "description": "Salon esthétique et coiffure pour femmes à Fès.",
-    "url": "https://VOTRE-DOMAINE.ma/",
-    "image": "https://VOTRE-DOMAINE.ma/images/partage/maryline-beauty-fes.jpg",
-    "telephone": "+212665108043",
-    "priceRange": "20 DH – 1000 DH",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "N2 Rue Abi Ouakass, Bouremana",
-      "addressLocality": "Fès",
-      "postalCode": "30060",
-      "addressCountry": "MA"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "10:00",
-      "closes": "21:00"
-    },
-    "sameAs": [
-      "https://www.instagram.com/marylinebeauty.fes/",
-      "https://www.tiktok.com/@marylinebeautyfes20"
-    ]
-  }
-  </script>
-</head>
+    <!-- Données structurées : fiche entreprise locale pour Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["BeautySalon", "HairSalon"],
+        "@id": "https://VOTRE-DOMAINE.ma/#salon",
+        "name": "Maryline Beauty Fès",
+        "description": "Salon esthétique et coiffure pour femmes à Fès.",
+        "url": "https://VOTRE-DOMAINE.ma/",
+        "image": "https://VOTRE-DOMAINE.ma/images/partage/maryline-beauty-fes.jpg",
+        "telephone": "+212665108043",
+        "priceRange": "20 DH – 1000 DH",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "N2 Rue Abi Ouakass, Bouremana",
+          "addressLocality": "Fès",
+          "postalCode": "30060",
+          "addressCountry": "MA"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        },
+        "sameAs": [
+          "https://www.instagram.com/marylinebeauty.fes/",
+          "https://www.tiktok.com/@marylinebeautyfes20"
+        ]
+      }
+    </script>
+  </head>
 
-<body id="top">
-
-  <!-- ============================================================
+  <body id="top">
+    <!-- ============================================================
        SYMBOLES SVG : boîte à icônes invisible, réutilisée avec <use>
        ============================================================ -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <svg
+      width="0"
+      height="0"
+      style="position: absolute"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <!-- Icônes de contact -->
+      <symbol id="phone" viewBox="0 0 24 24">
+        <path
+          d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"
+        />
+      </symbol>
+      <symbol id="insta" viewBox="0 0 24 24">
+        <path
+          d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"
+        />
+      </symbol>
+      <symbol id="tiktok" viewBox="0 0 24 24">
+        <path
+          d="M16.5 2c.3 2.3 1.7 3.9 4 4.1v3.1a7.5 7.5 0 0 1-4-1.2v6.6A6.4 6.4 0 1 1 10 8.3v3.2a3.3 3.3 0 1 0 3.3 3.3V2z"
+        />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path
+          d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+        />
+      </symbol>
 
-    <!-- Icônes de contact -->
-    <symbol id="phone" viewBox="0 0 24 24">
-      <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>
-    </symbol>
-    <symbol id="insta" viewBox="0 0 24 24">
-      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
-    </symbol>
-    <symbol id="tiktok" viewBox="0 0 24 24">
-      <path d="M16.5 2c.3 2.3 1.7 3.9 4 4.1v3.1a7.5 7.5 0 0 1-4-1.2v6.6A6.4 6.4 0 1 1 10 8.3v3.2a3.3 3.3 0 1 0 3.3 3.3V2z"/>
-    </symbol>
-    <symbol id="pin" viewBox="0 0 24 24">
-      <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-    </symbol>
+      <!-- Dégradé or métallique (couronne et icônes de soins) -->
+      <linearGradient id="goldFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F4D59A" />
+        <stop offset=".55" stop-color="#C9964F" />
+        <stop offset="1" stop-color="#7A5128" />
+      </linearGradient>
 
-    <!-- Dégradé or métallique (couronne et icônes de soins) -->
-    <linearGradient id="goldFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F4D59A"/>
-      <stop offset=".55" stop-color="#C9964F"/>
-      <stop offset="1" stop-color="#7A5128"/>
-    </linearGradient>
+      <!-- Ornements : couronne, coin art déco, losange -->
+      <symbol id="crown" viewBox="0 0 80 40">
+        <path
+          d="M10 31 L5 11 L24 22 L40 5 L56 22 L75 11 L70 31 Z"
+          fill="url(#goldFill)"
+        />
+        <path d="M9 36 H71" stroke="currentColor" stroke-width="2" />
+        <circle cx="5" cy="9" r="3" fill="currentColor" />
+        <circle cx="40" cy="4" r="3.4" fill="currentColor" />
+        <circle cx="75" cy="9" r="3" fill="currentColor" />
+        <path d="M40 17 L44 22 L40 27 L36 22Z" fill="#000" />
+      </symbol>
+      <symbol id="corner" viewBox="0 0 60 60">
+        <g fill="none" stroke="currentColor" stroke-width="1.3">
+          <path d="M2 58 V16 Q2 2 16 2 H58" />
+          <path d="M9 58 V22 Q9 9 22 9 H58" opacity=".55" />
+          <path d="M16 16 q10 -2 12 6 q1 6 -5 6 q-4 0 -3 -4" />
+        </g>
+        <circle cx="16" cy="16" r="2.4" fill="currentColor" />
+      </symbol>
+      <symbol id="diamond" viewBox="0 0 12 12">
+        <path d="M6 0 L12 6 L6 12 L0 6Z" />
+      </symbol>
 
-    <!-- Ornements : couronne, coin art déco, losange -->
-    <symbol id="crown" viewBox="0 0 80 40">
-      <path d="M10 31 L5 11 L24 22 L40 5 L56 22 L75 11 L70 31 Z" fill="url(#goldFill)"/>
-      <path d="M9 36 H71" stroke="currentColor" stroke-width="2"/>
-      <circle cx="5" cy="9" r="3" fill="currentColor"/>
-      <circle cx="40" cy="4" r="3.4" fill="currentColor"/>
-      <circle cx="75" cy="9" r="3" fill="currentColor"/>
-      <path d="M40 17 L44 22 L40 27 L36 22Z" fill="#000"/>
-    </symbol>
-    <symbol id="corner" viewBox="0 0 60 60">
-      <g fill="none" stroke="currentColor" stroke-width="1.3">
-        <path d="M2 58 V16 Q2 2 16 2 H58"/>
-        <path d="M9 58 V22 Q9 9 22 9 H58" opacity=".55"/>
-        <path d="M16 16 q10 -2 12 6 q1 6 -5 6 q-4 0 -3 -4"/>
-      </g>
-      <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
-    </symbol>
-    <symbol id="diamond" viewBox="0 0 12 12">
-      <path d="M6 0 L12 6 L6 12 L0 6Z"/>
-    </symbol>
+      <!-- Icônes des soins -->
+      <symbol id="drop" viewBox="0 0 20 20">
+        <path d="M10 1 C10 1 3 9 3 13 a7 7 0 0 0 14 0 C17 9 10 1 10 1Z" />
+      </symbol>
+      <symbol id="gem" viewBox="0 0 20 20">
+        <path d="M5 3 H15 L19 8 L10 18 L1 8Z" />
+      </symbol>
+      <symbol id="bottle" viewBox="0 0 20 20">
+        <path d="M8 1 H12 V5 L14 7 V19 H6 V7 L8 5Z" />
+      </symbol>
+      <symbol id="polish" viewBox="0 0 20 20">
+        <path d="M9 1 H11 V7 H13 V9 L15 11 V19 H5 V11 L7 9 V7 H9Z" />
+      </symbol>
+      <symbol id="eye" viewBox="0 0 20 20">
+        <path
+          d="M1 10 Q10 2 19 10 Q10 18 1 10Z M10 7 a3 3 0 1 0 0.01 0Z"
+          fill-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="wave" viewBox="0 0 20 20">
+        <path
+          d="M6 1 C2 5 10 8 6 12 C3 15 6 18 8 19 L10 19 C8 17 6 15 9 12 C13 8 5 5 9 1Z M12 1 C8 5 16 8 12 12 C9 15 12 18 14 19 L16 19 C14 17 12 15 15 12 C19 8 11 5 15 1Z"
+        />
+      </symbol>
+      <symbol id="nail" viewBox="0 0 20 20">
+        <path
+          d="M6 19 V8 a4 4 0 0 1 8 0 V19Z M8 8 a2 2 0 0 1 4 0 V11 H8Z"
+          fill-rule="evenodd"
+        />
+      </symbol>
+    </svg>
 
-    <!-- Icônes des soins -->
-    <symbol id="drop" viewBox="0 0 20 20"><path d="M10 1 C10 1 3 9 3 13 a7 7 0 0 0 14 0 C17 9 10 1 10 1Z"/></symbol>
-    <symbol id="gem" viewBox="0 0 20 20"><path d="M5 3 H15 L19 8 L10 18 L1 8Z"/></symbol>
-    <symbol id="bottle" viewBox="0 0 20 20"><path d="M8 1 H12 V5 L14 7 V19 H6 V7 L8 5Z"/></symbol>
-    <symbol id="polish" viewBox="0 0 20 20"><path d="M9 1 H11 V7 H13 V9 L15 11 V19 H5 V11 L7 9 V7 H9Z"/></symbol>
-    <symbol id="eye" viewBox="0 0 20 20"><path d="M1 10 Q10 2 19 10 Q10 18 1 10Z M10 7 a3 3 0 1 0 0.01 0Z" fill-rule="evenodd"/></symbol>
-    <symbol id="wave" viewBox="0 0 20 20"><path d="M6 1 C2 5 10 8 6 12 C3 15 6 18 8 19 L10 19 C8 17 6 15 9 12 C13 8 5 5 9 1Z M12 1 C8 5 16 8 12 12 C9 15 12 18 14 19 L16 19 C14 17 12 15 15 12 C19 8 11 5 15 1Z"/></symbol>
-    <symbol id="nail" viewBox="0 0 20 20"><path d="M6 19 V8 a4 4 0 0 1 8 0 V19Z M8 8 a2 2 0 0 1 4 0 V11 H8Z" fill-rule="evenodd"/></symbol>
-  </svg>
-
-
-  <!-- ============================================================
+    <!-- ============================================================
        EN-TÊTE : logo, menu, bouton Appeler, burger mobile
        ============================================================ -->
-  <header class="site-header">
-
-    <!-- Logo : monogramme + nom -->
-    <a class="brand" href="#top" aria-label="Maryline Beauty Fès, retour en haut de page">
-      <span class="mono gold-text" aria-hidden="true">MB</span>
-      <span class="brand-name gold-text" aria-hidden="true">Maryline<small>Beauty Fès</small></span>
-    </a>
-
-    <!-- Menu ordinateur et tablette -->
-    <nav class="nav" aria-label="Navigation principale">
-      <a href="#soins">Soins</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#mariee">Pack Mariée</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Bouton Appeler (caché sur mobile, remplacé par la barre du bas) -->
-    <a class="btn-appeler" href="tel:+212665108043">
-      <svg aria-hidden="true"><use href="#phone"/></svg>
-      Appeler
-    </a>
-
-    <!-- Bouton burger (mobile uniquement) -->
-    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Menu mobile (ouvert par le burger) -->
-    <nav class="m-menu" id="menu-mobile" aria-label="Menu mobile" hidden>
-      <a href="#soins">Soins</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#mariee">Pack Mariée</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-
-  <!-- ============================================================
-       CONTENU PRINCIPAL
-       ============================================================ -->
-  <main id="contenu">
-
-    <!-- ==========================================================
-         SECTION HERO : première impression (nom, slogan, photo)
-         ========================================================== -->
-    <section class="hero" id="hero" aria-label="Accueil">
-
-      <!-- Poussière d'or animée (dessinée en JavaScript) -->
-      <canvas class="dust" id="dust" aria-hidden="true"></canvas>
-
-      <!-- Cadre art déco -->
-      <div class="deco">
-        <!-- Filets du cadre (haut, bas, gauche, droite) -->
-        <span class="edge edge-t"></span>
-        <span class="edge edge-b"></span>
-        <span class="edge edge-l"></span>
-        <span class="edge edge-r"></span>
-        <!-- Coins en filigrane -->
-        <svg class="coin coin-hg" aria-hidden="true"><use href="#corner"/></svg>
-        <svg class="coin coin-hd" aria-hidden="true"><use href="#corner"/></svg>
-        <svg class="coin coin-bg" aria-hidden="true"><use href="#corner"/></svg>
-        <svg class="coin coin-bd" aria-hidden="true"><use href="#corner"/></svg>
-
-        <div class="hero-grid">
-
-          <!-- Textes du hero -->
-          <div class="hero-text">
-            <h1>
-              <svg class="crown" aria-hidden="true"><use href="#crown"/></svg>
-              <span class="mono gold-text" aria-hidden="true">MB</span>
-              <span class="wordmark gold-text shimmer">Maryline</span>
-              <span class="wordmark-sub gold-text shimmer">Beauty Fès</span>
-              <span class="tagline">Salon esthétique &amp; coiffure à Fès</span>
-            </h1>
-            <p class="slogan">Votre beauté est notre art</p>
-            <p class="hero-intro">Coiffure, soins cheveux, onglerie, soins du visage et cils, dans un salon réservé aux femmes.</p>
-            <div class="hero-btns">
-              <a class="btn-appeler" href="tel:+212665108043">
-                <svg aria-hidden="true"><use href="#phone"/></svg>
-                Appeler
-              </a>
-              <a class="btn-contour" href="#tarifs">Voir les tarifs</a>
-            </div>
-          </div>
-
-          <img class="arch-inner"
-            src="images/salon/interieur-salon-maryline-beauty-fes.png"
-            alt="Intérieur du salon Maryline Beauty à Fès"
-            width="800" height="1000"
-            fetchpriority="high">
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ==========================================================
-         SECTION SOINS SIGNATURE : soins phares avec prix
-         ========================================================== -->
-    <section class="section" id="soins" aria-labelledby="soins-titre">
-      <div class="wrap">
-
-        <div class="sec-head">
-          <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
-          <h2 id="soins-titre" class="gold-text">Soins signature</h2>
-          <p>Nos soins cheveux phares et nos poses les plus demandées.</p>
-        </div>
-
-        <ul class="sig">
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#drop"/></svg></span>
-            <span class="p-name">CCRP</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">300 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#gem"/></svg></span>
-            <span class="p-name">Protéine Black Diamant</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">550 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true">PKC</span>
-            <span class="p-name">PKC</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">450 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#bottle"/></svg></span>
-            <span class="p-name">Soin cheveux Olaplex</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">400 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#bottle"/></svg></span>
-            <span class="p-name">Soin L'Oréal Professionnel</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">150 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#wave"/></svg></span>
-            <span class="p-name">Cheveux Wivi</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">100 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#polish"/></svg></span>
-            <span class="p-name">Vernis permanent</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">80 <span>DH</span></span></span>
-          </li>
-          <li>
-            <!-- À CONFIRMER avec la cliente : "Faux angle" sur l'affiche -->
-            <span class="p-icon" aria-hidden="true"><svg><use href="#nail"/></svg></span>
-            <span class="p-name">Faux ongles</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">150 <span>DH</span></span></span>
-          </li>
-          <li>
-            <span class="p-icon" aria-hidden="true"><svg><use href="#eye"/></svg></span>
-            <span class="p-name">Pose cils à cils permanent</span>
-            <span class="p-price"><small>à partir de</small><span class="pill">200 <span>DH</span></span></span>
-          </li>
-        </ul>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================
-         SECTION TARIFS : tous les prix, rangés par catégorie
-         ========================================================== -->
-    <section class="section" id="tarifs" aria-labelledby="tarifs-titre">
-      <div class="wrap">
-
-        <div class="sec-head">
-          <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
-          <h2 id="tarifs-titre" class="gold-text">Nos tarifs</h2>
-          <p>Toutes nos prestations, prix en dirhams.</p>
-        </div>
-
-        <!-- Onglets des catégories -->
-        <div class="tabs" role="tablist" aria-label="Catégories de prestations">
-          <button type="button" role="tab" id="onglet-coiffure" aria-controls="panneau-coiffure" aria-selected="true">Coiffure</button>
-          <button type="button" role="tab" id="onglet-onglerie" aria-controls="panneau-onglerie" aria-selected="false" tabindex="-1">Onglerie</button>
-          <button type="button" role="tab" id="onglet-visage" aria-controls="panneau-visage" aria-selected="false" tabindex="-1">Soins du visage</button>
-          <button type="button" role="tab" id="onglet-epilation" aria-controls="panneau-epilation" aria-selected="false" tabindex="-1">Épilation</button>
-          <button type="button" role="tab" id="onglet-cils" aria-controls="panneau-cils" aria-selected="false" tabindex="-1">Cils &amp; sourcils</button>
-        </div>
-
-        <!-- Contenu des onglets -->
-        <div class="price-layout">
-
-          <div class="cat-visual" aria-hidden="true">
-            <div id="cat-label">Coiffure</div>
-          </div>
-
-          <div>
-            <!-- Panneau Coiffure -->
-            <div role="tabpanel" id="panneau-coiffure" aria-labelledby="onglet-coiffure">
-              <h3 class="sr-only">Tarifs coiffure</h3>
-              <ul class="plist">
-                <li><span>Brushing</span><span class="dots" aria-hidden="true"></span><b>40 DH</b></li>
-                <li><span>Coupe + brushing</span><span class="dots" aria-hidden="true"></span><b>100 DH</b></li>
-                <li><span>Coupe pointes</span><span class="dots" aria-hidden="true"></span><b>60 DH</b></li>
-                <li><span>Coloration</span><span class="dots" aria-hidden="true"></span><b>250 DH</b></li>
-                <li><span>Racines</span><span class="dots" aria-hidden="true"></span><b>150 DH</b></li>
-                <li><span>Coiffure</span><span class="dots" aria-hidden="true"></span><b>150 DH</b></li>
-                <li><span>Balayage</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 400 DH</b></li>
-                <li><span>Ombré</span><span class="dots" aria-hidden="true"></span><b>600 DH</b></li>
-                <li><span>Lissage kératine</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 550 DH</b></li>
-                <li><span>Protéine</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 600 DH</b></li>
-              </ul>
-            </div>
-
-            <!-- Panneau Onglerie -->
-            <div role="tabpanel" id="panneau-onglerie" aria-labelledby="onglet-onglerie" hidden>
-              <h3 class="sr-only">Tarifs onglerie</h3>
-              <ul class="plist">
-                <li><span>Manucure</span><span class="dots" aria-hidden="true"></span><b>80 DH</b></li>
-                <li><span>Pédicure</span><span class="dots" aria-hidden="true"></span><b>120 DH</b></li>
-                <li><span>Pédicure spa</span><span class="dots" aria-hidden="true"></span><b>165 DH</b></li>
-                <li><span>Pédicure spa Skintruth</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
-                <li><span>Pose gel</span><span class="dots" aria-hidden="true"></span><b>199 DH</b></li>
-                <li><span>Capsules gel</span><span class="dots" aria-hidden="true"></span><b>249 DH</b></li>
-                <li><span>Semi-permanent</span><span class="dots" aria-hidden="true"></span><b>80 DH</b></li>
-                <li><span>BIAB</span><span class="dots" aria-hidden="true"></span><b>100 DH</b></li>
-              </ul>
-            </div>
-
-            <!-- Panneau Soins du visage -->
-            <div role="tabpanel" id="panneau-visage" aria-labelledby="onglet-visage" hidden>
-              <h3 class="sr-only">Tarifs soins du visage</h3>
-              <ul class="plist">
-                <li><span>Soin visage complet</span><span class="dots" aria-hidden="true"></span><b><em>dès</em> 150 DH</b></li>
-                <li><span>Hydrafacial</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
-                <li><span>Aqua peeling</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
-                <li><span>Nettoyage profond</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
-              </ul>
-            </div>
-
-            <!-- Panneau Épilation -->
-            <div role="tabpanel" id="panneau-epilation" aria-labelledby="onglet-epilation" hidden>
-              <h3 class="sr-only">Tarifs épilation</h3>
-              <ul class="plist">
-                <li><span>Sourcils</span><span class="dots" aria-hidden="true"></span><b>30 DH</b></li>
-                <li><span>Lèvre supérieure</span><span class="dots" aria-hidden="true"></span><b>20 DH</b></li>
-                <li><span>Aisselles</span><span class="dots" aria-hidden="true"></span><b>30 DH</b></li>
-                <li><span>Bras</span><span class="dots" aria-hidden="true"></span><b>70 DH</b></li>
-                <li><span>Demi-bras</span><span class="dots" aria-hidden="true"></span><b>40 DH</b></li>
-                <li><span>Demi-jambes</span><span class="dots" aria-hidden="true"></span><b>50 DH</b></li>
-                <li><span>Jambes complètes</span><span class="dots" aria-hidden="true"></span><b>80 DH</b></li>
-                <li><span>Maillot intégral</span><span class="dots" aria-hidden="true"></span><b>70 DH</b></li>
-                <li><span>Épilation complète</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
-              </ul>
-            </div>
-
-            <!-- Panneau Cils & sourcils -->
-            <div role="tabpanel" id="panneau-cils" aria-labelledby="onglet-cils" hidden>
-              <h3 class="sr-only">Tarifs cils et sourcils</h3>
-              <ul class="plist">
-                <li><span>Pose cils à cils</span><span class="dots" aria-hidden="true"></span><b>200 DH</b></li>
-                <li><span>Effet naturel</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
-                <li><span>Rehaussement des cils</span><span class="dots" aria-hidden="true"></span><b>300 DH</b></li>
-                <li><span>Faux cils</span><span class="dots" aria-hidden="true"></span><b>50 DH</b></li>
-                <li><span>Teinture sourcils</span><span class="dots" aria-hidden="true"></span><b>50 DH</b></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ==========================================================
-         SECTION PACK MARIÉE : prestation phare, mise en avant
-         ========================================================== -->
-    <section class="section" id="mariee" aria-labelledby="mariee-titre">
-      <div class="wrap">
-        <div class="bridal">
-
-          <!-- Photos : carrousel glissant sur mobile, de chaque côté sur ordinateur -->
-          <div class="bridal-slider">
-            <div class="photo">
-              <div>Coiffure de mariée</div>
-            </div>
-            <div class="photo">
-              <div>Maquillage</div>
-            </div>
-          </div>
-
-          <!-- Points du carrousel (mobile uniquement) -->
-        <div class="slider-dots" aria-hidden="true">
-            <span class="dot is-active"></span>
-            <span class="dot"></span>
-        </div>
-
-          <!-- Carte centrale -->
-          <div class="card">
-            <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
-            <h2 id="mariee-titre" class="gold-text">Pack Mariée</h2>
-            <p class="script">Pour le plus beau jour</p>
-            <ul class="bridal-prices">
-              <li><span>Pack Mariée</span><b>dès 1000 DH</b></li>
-              <li><span>Maquillage invitée</span><b>300 DH</b></li>
-            </ul>
-            <a class="btn-appeler" href="tel:+212665108043">
-              <svg aria-hidden="true"><use href="#phone"/></svg>
-              Réserver ma date
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ==========================================================
-         SECTION GALERIE : réalisations du salon
-         ========================================================== -->
-    <section class="section" id="galerie" aria-labelledby="galerie-titre">
-      <div class="wrap">
-
-        <div class="sec-head">
-          <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
-          <h2 id="galerie-titre" class="gold-text">Nos réalisations</h2>
-          <p>Un aperçu du travail du salon. Retrouvez toutes nos nouveautés sur Instagram.</p>
-        </div>
-
-        <!-- Grille de photos (À REMPLACER : chaque g-photo par une vraie <img>) -->
-        <div class="gallery">
-
-          <figure class="g-item">
-            <img src="images/galerie/balayage-blond-miel-fes.jpeg"
-                 alt="Balayage blond miel réalisé au salon Maryline Beauty à Fès"
-                 width="600" height="600" loading="lazy">
-            <figcaption>Balayage</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Pose gel</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Lissage kératine</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Cils à cils</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Coiffure de soirée</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Hydrafacial</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Capsules gel</figcaption>
-          </figure>
-
-          <figure class="g-item">
-            <div class="g-photo"></div>
-            <figcaption>Coloration</figcaption>
-          </figure>
-
-        </div>
-
-        <div class="gallery-cta">
-          <a class="btn-contour" href="https://www.instagram.com/marylinebeauty.fes/" target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#insta"/></svg>
-            Voir plus sur Instagram
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================
-         SECTION CONTACT : téléphone, réseaux, horaires, adresse
-         ========================================================== -->
-    <section class="section" id="contact" aria-labelledby="contact-titre">
-      <div class="wrap">
-
-        <div class="sec-head">
-          <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
-          <h2 id="contact-titre" class="gold-text">Nous trouver</h2>
-          <p>Pour prendre rendez-vous, appelez-nous ou écrivez-nous sur Instagram.</p>
-        </div>
-
-        <div class="contact-grid">
-
-          <!-- Moyens de contact -->
-          <div class="c-list">
-            <a class="c-item" href="tel:+212665108043">
-              <span class="p-icon" aria-hidden="true"><svg><use href="#phone"/></svg></span>
-              <span><strong>Téléphone</strong>0665 10 80 43</span>
-            </a>
-            <a class="c-item" href="https://www.instagram.com/marylinebeauty.fes/" target="_blank" rel="noopener">
-              <span class="p-icon" aria-hidden="true"><svg><use href="#insta"/></svg></span>
-              <span><strong>Instagram</strong>@marylinebeauty.fes</span>
-            </a>
-            <a class="c-item" href="https://www.tiktok.com/@marylinebeautyfes20" target="_blank" rel="noopener">
-              <span class="p-icon" aria-hidden="true"><svg><use href="#tiktok"/></svg></span>
-              <span><strong>TikTok</strong>@marylinebeautyfes20</span>
-            </a>
-          </div>
-
-          <!-- Horaires et adresse -->
-          <div class="hours">
-            <h3>Horaires</h3>
-            <dl>
-              <dt>Tous les jours</dt><dd>10h – 21h</dd>
-            </dl>
-            <p class="hours-note">Ouvert 7 jours sur 7</p>
-            <address>
-              <strong>Adresse</strong>
-              N2 Rue Abi Ouakass, Bouremana<br>
-              Fès 30060, Maroc
-            </address>
-          </div>
-
-          <!-- Plan d'accès -->
-          <div class="map">
-            <h3>Plan d'accès</h3>
-            <iframe class="map-box"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.974904224946!2d-4.997143523762322!3d34.018855119491576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8be71bea1eb3%3A0x9509544c7f22340c!2sMaryline%20Beauty%20Fes!5e0!3m2!1sfr!2sbe!4v1790157804068!5m2!1sfr!2sbe"
-                    title="Plan d'accès au salon Maryline Beauty à Fès"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen></iframe>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ============================================================
-       PIED DE PAGE
-       ============================================================ -->
-  <footer class="site-footer">
-    <div class="wrap f-grid">
-
-      <a class="brand" href="#top" aria-label="Maryline Beauty Fès, retour en haut de page">
+    <header class="site-header">
+      <!-- Logo : monogramme + nom -->
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Maryline Beauty Fès, retour en haut de page"
+      >
         <span class="mono gold-text" aria-hidden="true">MB</span>
-        <span class="brand-name gold-text" aria-hidden="true">Maryline<small>Beauty Fès</small></span>
+        <span class="brand-name gold-text" aria-hidden="true"
+          >Maryline<small>Beauty Fès</small></span
+        >
       </a>
 
-      <nav class="f-links" aria-label="Liens du pied de page">
+      <!-- Menu ordinateur et tablette -->
+      <nav class="nav" aria-label="Navigation principale">
         <a href="#soins">Soins</a>
         <a href="#tarifs">Tarifs</a>
         <a href="#mariee">Pack Mariée</a>
@@ -600,37 +223,777 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="socials">
-        <a href="https://www.instagram.com/marylinebeauty.fes/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg aria-hidden="true"><use href="#insta"/></svg>
+      <!-- Bouton Appeler (caché sur mobile, remplacé par la barre du bas) -->
+      <a class="btn-appeler" href="tel:+212665108043">
+        <svg aria-hidden="true"><use href="#phone" /></svg>
+        Appeler
+      </a>
+
+      <!-- Bouton burger (mobile uniquement) -->
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        aria-label="Ouvrir le menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menu mobile (ouvert par le burger) -->
+      <nav class="m-menu" id="menu-mobile" aria-label="Menu mobile" hidden>
+        <a href="#soins">Soins</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#mariee">Pack Mariée</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+       CONTENU PRINCIPAL
+       ============================================================ -->
+    <main id="contenu">
+      <!-- ==========================================================
+         SECTION HERO : première impression (nom, slogan, photo)
+         ========================================================== -->
+      <section class="hero" id="hero" aria-label="Accueil">
+        <!-- Poussière d'or animée (dessinée en JavaScript) -->
+        <canvas class="dust" id="dust" aria-hidden="true"></canvas>
+
+        <!-- Cadre art déco -->
+        <div class="deco">
+          <!-- Filets du cadre (haut, bas, gauche, droite) -->
+          <span class="edge edge-t"></span>
+          <span class="edge edge-b"></span>
+          <span class="edge edge-l"></span>
+          <span class="edge edge-r"></span>
+          <!-- Coins en filigrane -->
+          <svg class="coin coin-hg" aria-hidden="true">
+            <use href="#corner" />
+          </svg>
+          <svg class="coin coin-hd" aria-hidden="true">
+            <use href="#corner" />
+          </svg>
+          <svg class="coin coin-bg" aria-hidden="true">
+            <use href="#corner" />
+          </svg>
+          <svg class="coin coin-bd" aria-hidden="true">
+            <use href="#corner" />
+          </svg>
+
+          <div class="hero-grid">
+            <!-- Textes du hero -->
+            <div class="hero-text">
+              <h1>
+                <svg class="crown" aria-hidden="true">
+                  <use href="#crown" />
+                </svg>
+                <span class="mono gold-text" aria-hidden="true">MB</span>
+                <span class="wordmark gold-text shimmer">Maryline</span>
+                <span class="wordmark-sub gold-text shimmer">Beauty Fès</span>
+                <span class="tagline"
+                  >Salon esthétique &amp; coiffure à Fès</span
+                >
+              </h1>
+              <p class="slogan">Votre beauté est notre art</p>
+              <p class="hero-intro">
+                Coiffure, soins cheveux, onglerie, soins du visage et cils, dans
+                un salon réservé aux femmes.
+              </p>
+              <div class="hero-btns">
+                <a class="btn-appeler" href="tel:+212665108043">
+                  <svg aria-hidden="true"><use href="#phone" /></svg>
+                  Appeler
+                </a>
+                <a class="btn-contour" href="#tarifs">Voir les tarifs</a>
+              </div>
+            </div>
+
+            <!-- Arche photo -->
+            <div class="arch">
+              <img
+                class="arch-inner"
+                src="images/salon/interieur-salon-maryline-beauty-fes.png"
+                alt="Intérieur du salon Maryline Beauty à Fès"
+                width="800"
+                height="1000"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         SECTION SOINS SIGNATURE : soins phares avec prix
+         ========================================================== -->
+      <section class="section" id="soins" aria-labelledby="soins-titre">
+        <div class="wrap">
+          <div class="sec-head">
+            <div class="divider" aria-hidden="true">
+              <svg><use href="#diamond" /></svg>
+            </div>
+            <h2 id="soins-titre" class="gold-text">Soins signature</h2>
+            <p>Nos soins cheveux phares et nos poses les plus demandées.</p>
+          </div>
+
+          <ul class="sig">
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#drop" /></svg
+              ></span>
+              <span class="p-name">CCRP</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">300 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#gem" /></svg
+              ></span>
+              <span class="p-name">Protéine Black Diamant</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">550 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true">PKC</span>
+              <span class="p-name">PKC</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">450 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#bottle" /></svg
+              ></span>
+              <span class="p-name">Soin cheveux Olaplex</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">400 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#bottle" /></svg
+              ></span>
+              <span class="p-name">Soin L'Oréal Professionnel</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">150 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#wave" /></svg
+              ></span>
+              <span class="p-name">Cheveux Wivi</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">100 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#polish" /></svg
+              ></span>
+              <span class="p-name">Vernis permanent</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">80 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <!-- À CONFIRMER avec la cliente : "Faux angle" sur l'affiche -->
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#nail" /></svg
+              ></span>
+              <span class="p-name">Faux ongles</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">150 <span>DH</span></span></span
+              >
+            </li>
+            <li>
+              <span class="p-icon" aria-hidden="true"
+                ><svg><use href="#eye" /></svg
+              ></span>
+              <span class="p-name">Pose cils à cils permanent</span>
+              <span class="p-price"
+                ><small>à partir de</small
+                ><span class="pill">200 <span>DH</span></span></span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         SECTION TARIFS : tous les prix, rangés par catégorie
+         ========================================================== -->
+      <section class="section" id="tarifs" aria-labelledby="tarifs-titre">
+        <div class="wrap">
+          <div class="sec-head">
+            <div class="divider" aria-hidden="true">
+              <svg><use href="#diamond" /></svg>
+            </div>
+            <h2 id="tarifs-titre" class="gold-text">Nos tarifs</h2>
+            <p>Toutes nos prestations, prix en dirhams.</p>
+          </div>
+
+          <!-- Onglets des catégories -->
+          <div
+            class="tabs"
+            role="tablist"
+            aria-label="Catégories de prestations"
+          >
+            <button
+              type="button"
+              role="tab"
+              id="onglet-coiffure"
+              aria-controls="panneau-coiffure"
+              aria-selected="true"
+            >
+              Coiffure
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="onglet-onglerie"
+              aria-controls="panneau-onglerie"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Onglerie
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="onglet-visage"
+              aria-controls="panneau-visage"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Soins du visage
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="onglet-epilation"
+              aria-controls="panneau-epilation"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Épilation
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="onglet-cils"
+              aria-controls="panneau-cils"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Cils &amp; sourcils
+            </button>
+          </div>
+
+          <!-- Contenu des onglets -->
+          <div class="price-layout">
+            <div class="cat-visual" aria-hidden="true">
+              <div id="cat-label">Coiffure</div>
+            </div>
+
+            <div>
+              <!-- Panneau Coiffure -->
+              <div
+                role="tabpanel"
+                id="panneau-coiffure"
+                aria-labelledby="onglet-coiffure"
+              >
+                <h3 class="sr-only">Tarifs coiffure</h3>
+                <ul class="plist">
+                  <li>
+                    <span>Brushing</span
+                    ><span class="dots" aria-hidden="true"></span><b>40 DH</b>
+                  </li>
+                  <li>
+                    <span>Coupe + brushing</span
+                    ><span class="dots" aria-hidden="true"></span><b>100 DH</b>
+                  </li>
+                  <li>
+                    <span>Coupe pointes</span
+                    ><span class="dots" aria-hidden="true"></span><b>60 DH</b>
+                  </li>
+                  <li>
+                    <span>Coloration</span
+                    ><span class="dots" aria-hidden="true"></span><b>250 DH</b>
+                  </li>
+                  <li>
+                    <span>Racines</span
+                    ><span class="dots" aria-hidden="true"></span><b>150 DH</b>
+                  </li>
+                  <li>
+                    <span>Coiffure</span
+                    ><span class="dots" aria-hidden="true"></span><b>150 DH</b>
+                  </li>
+                  <li>
+                    <span>Balayage</span
+                    ><span class="dots" aria-hidden="true"></span
+                    ><b><em>dès</em> 400 DH</b>
+                  </li>
+                  <li>
+                    <span>Ombré</span
+                    ><span class="dots" aria-hidden="true"></span><b>600 DH</b>
+                  </li>
+                  <li>
+                    <span>Lissage kératine</span
+                    ><span class="dots" aria-hidden="true"></span
+                    ><b><em>dès</em> 550 DH</b>
+                  </li>
+                  <li>
+                    <span>Protéine</span
+                    ><span class="dots" aria-hidden="true"></span
+                    ><b><em>dès</em> 600 DH</b>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Panneau Onglerie -->
+              <div
+                role="tabpanel"
+                id="panneau-onglerie"
+                aria-labelledby="onglet-onglerie"
+                hidden
+              >
+                <h3 class="sr-only">Tarifs onglerie</h3>
+                <ul class="plist">
+                  <li>
+                    <span>Manucure</span
+                    ><span class="dots" aria-hidden="true"></span><b>80 DH</b>
+                  </li>
+                  <li>
+                    <span>Pédicure</span
+                    ><span class="dots" aria-hidden="true"></span><b>120 DH</b>
+                  </li>
+                  <li>
+                    <span>Pédicure spa</span
+                    ><span class="dots" aria-hidden="true"></span><b>165 DH</b>
+                  </li>
+                  <li>
+                    <span>Pédicure spa Skintruth</span
+                    ><span class="dots" aria-hidden="true"></span><b>200 DH</b>
+                  </li>
+                  <li>
+                    <span>Pose gel</span
+                    ><span class="dots" aria-hidden="true"></span><b>199 DH</b>
+                  </li>
+                  <li>
+                    <span>Capsules gel</span
+                    ><span class="dots" aria-hidden="true"></span><b>249 DH</b>
+                  </li>
+                  <li>
+                    <span>Semi-permanent</span
+                    ><span class="dots" aria-hidden="true"></span><b>80 DH</b>
+                  </li>
+                  <li>
+                    <span>BIAB</span
+                    ><span class="dots" aria-hidden="true"></span><b>100 DH</b>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Panneau Soins du visage -->
+              <div
+                role="tabpanel"
+                id="panneau-visage"
+                aria-labelledby="onglet-visage"
+                hidden
+              >
+                <h3 class="sr-only">Tarifs soins du visage</h3>
+                <ul class="plist">
+                  <li>
+                    <span>Soin visage complet</span
+                    ><span class="dots" aria-hidden="true"></span
+                    ><b><em>dès</em> 150 DH</b>
+                  </li>
+                  <li>
+                    <span>Hydrafacial</span
+                    ><span class="dots" aria-hidden="true"></span><b>300 DH</b>
+                  </li>
+                  <li>
+                    <span>Aqua peeling</span
+                    ><span class="dots" aria-hidden="true"></span><b>300 DH</b>
+                  </li>
+                  <li>
+                    <span>Nettoyage profond</span
+                    ><span class="dots" aria-hidden="true"></span><b>200 DH</b>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Panneau Épilation -->
+              <div
+                role="tabpanel"
+                id="panneau-epilation"
+                aria-labelledby="onglet-epilation"
+                hidden
+              >
+                <h3 class="sr-only">Tarifs épilation</h3>
+                <ul class="plist">
+                  <li>
+                    <span>Sourcils</span
+                    ><span class="dots" aria-hidden="true"></span><b>30 DH</b>
+                  </li>
+                  <li>
+                    <span>Lèvre supérieure</span
+                    ><span class="dots" aria-hidden="true"></span><b>20 DH</b>
+                  </li>
+                  <li>
+                    <span>Aisselles</span
+                    ><span class="dots" aria-hidden="true"></span><b>30 DH</b>
+                  </li>
+                  <li>
+                    <span>Bras</span
+                    ><span class="dots" aria-hidden="true"></span><b>70 DH</b>
+                  </li>
+                  <li>
+                    <span>Demi-bras</span
+                    ><span class="dots" aria-hidden="true"></span><b>40 DH</b>
+                  </li>
+                  <li>
+                    <span>Demi-jambes</span
+                    ><span class="dots" aria-hidden="true"></span><b>50 DH</b>
+                  </li>
+                  <li>
+                    <span>Jambes complètes</span
+                    ><span class="dots" aria-hidden="true"></span><b>80 DH</b>
+                  </li>
+                  <li>
+                    <span>Maillot intégral</span
+                    ><span class="dots" aria-hidden="true"></span><b>70 DH</b>
+                  </li>
+                  <li>
+                    <span>Épilation complète</span
+                    ><span class="dots" aria-hidden="true"></span><b>200 DH</b>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Panneau Cils & sourcils -->
+              <div
+                role="tabpanel"
+                id="panneau-cils"
+                aria-labelledby="onglet-cils"
+                hidden
+              >
+                <h3 class="sr-only">Tarifs cils et sourcils</h3>
+                <ul class="plist">
+                  <li>
+                    <span>Pose cils à cils</span
+                    ><span class="dots" aria-hidden="true"></span><b>200 DH</b>
+                  </li>
+                  <li>
+                    <span>Effet naturel</span
+                    ><span class="dots" aria-hidden="true"></span><b>300 DH</b>
+                  </li>
+                  <li>
+                    <span>Rehaussement des cils</span
+                    ><span class="dots" aria-hidden="true"></span><b>300 DH</b>
+                  </li>
+                  <li>
+                    <span>Faux cils</span
+                    ><span class="dots" aria-hidden="true"></span><b>50 DH</b>
+                  </li>
+                  <li>
+                    <span>Teinture sourcils</span
+                    ><span class="dots" aria-hidden="true"></span><b>50 DH</b>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         SECTION PACK MARIÉE : prestation phare, mise en avant
+         ========================================================== -->
+      <section class="section" id="mariee" aria-labelledby="mariee-titre">
+        <div class="wrap">
+          <div class="bridal">
+            <!-- Photos : carrousel glissant sur mobile, de chaque côté sur ordinateur -->
+            <div class="bridal-slider">
+              <div class="photo">
+                <div>Coiffure de mariée</div>
+              </div>
+              <div class="photo">
+                <div>Maquillage</div>
+              </div>
+            </div>
+
+            <!-- Points du carrousel (mobile uniquement) -->
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot is-active"></span>
+              <span class="dot"></span>
+            </div>
+
+            <!-- Carte centrale -->
+            <div class="card">
+              <div class="divider" aria-hidden="true">
+                <svg><use href="#diamond" /></svg>
+              </div>
+              <h2 id="mariee-titre" class="gold-text">Pack Mariée</h2>
+              <p class="script">Pour le plus beau jour</p>
+              <ul class="bridal-prices">
+                <li><span>Pack Mariée</span><b>dès 1000 DH</b></li>
+                <li><span>Maquillage invitée</span><b>300 DH</b></li>
+              </ul>
+              <a class="btn-appeler" href="tel:+212665108043">
+                <svg aria-hidden="true"><use href="#phone" /></svg>
+                Réserver ma date
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         SECTION GALERIE : réalisations du salon
+         ========================================================== -->
+      <section class="section" id="galerie" aria-labelledby="galerie-titre">
+        <div class="wrap">
+          <div class="sec-head">
+            <div class="divider" aria-hidden="true">
+              <svg><use href="#diamond" /></svg>
+            </div>
+            <h2 id="galerie-titre" class="gold-text">Nos réalisations</h2>
+            <p>
+              Un aperçu du travail du salon. Retrouvez toutes nos nouveautés sur
+              Instagram.
+            </p>
+          </div>
+
+          <!-- Grille de photos (À REMPLACER : chaque g-photo par une vraie <img>) -->
+          <div class="gallery">
+            <figure class="g-item">
+              <img
+                src="images/galerie/balayage-blond-miel-fes.jpeg"
+                alt="Balayage blond miel réalisé au salon Maryline Beauty à Fès"
+                width="600"
+                height="600"
+                loading="lazy"
+              />
+              <figcaption>Balayage</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Pose gel</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Lissage kératine</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Cils à cils</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Coiffure de soirée</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Hydrafacial</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Capsules gel</figcaption>
+            </figure>
+
+            <figure class="g-item">
+              <div class="g-photo"></div>
+              <figcaption>Coloration</figcaption>
+            </figure>
+          </div>
+
+          <div class="gallery-cta">
+            <a
+              class="btn-contour"
+              href="https://www.instagram.com/marylinebeauty.fes/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg aria-hidden="true"><use href="#insta" /></svg>
+              Voir plus sur Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         SECTION CONTACT : téléphone, réseaux, horaires, adresse
+         ========================================================== -->
+      <section class="section" id="contact" aria-labelledby="contact-titre">
+        <div class="wrap">
+          <div class="sec-head">
+            <div class="divider" aria-hidden="true">
+              <svg><use href="#diamond" /></svg>
+            </div>
+            <h2 id="contact-titre" class="gold-text">Nous trouver</h2>
+            <p>
+              Pour prendre rendez-vous, appelez-nous ou écrivez-nous sur
+              Instagram.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Moyens de contact -->
+            <div class="c-list">
+              <a class="c-item" href="tel:+212665108043">
+                <span class="p-icon" aria-hidden="true"
+                  ><svg><use href="#phone" /></svg
+                ></span>
+                <span><strong>Téléphone</strong>0665 10 80 43</span>
+              </a>
+              <a
+                class="c-item"
+                href="https://www.instagram.com/marylinebeauty.fes/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="p-icon" aria-hidden="true"
+                  ><svg><use href="#insta" /></svg
+                ></span>
+                <span><strong>Instagram</strong>@marylinebeauty.fes</span>
+              </a>
+              <a
+                class="c-item"
+                href="https://www.tiktok.com/@marylinebeautyfes20"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="p-icon" aria-hidden="true"
+                  ><svg><use href="#tiktok" /></svg
+                ></span>
+                <span><strong>TikTok</strong>@marylinebeautyfes20</span>
+              </a>
+            </div>
+
+            <!-- Horaires et adresse -->
+            <div class="hours">
+              <h3>Horaires</h3>
+              <dl>
+                <dt>Tous les jours</dt>
+                <dd>10h – 21h</dd>
+              </dl>
+              <p class="hours-note">Ouvert 7 jours sur 7</p>
+              <address>
+                <strong>Adresse</strong>
+                N2 Rue Abi Ouakass, Bouremana<br />
+                Fès 30060, Maroc
+              </address>
+            </div>
+
+            <!-- Plan d'accès -->
+            <div class="map">
+              <h3>Plan d'accès</h3>
+              <iframe
+                class="map-box"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.974904224946!2d-4.997143523762322!3d34.018855119491576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8be71bea1eb3%3A0x9509544c7f22340c!2sMaryline%20Beauty%20Fes!5e0!3m2!1sfr!2sbe!4v1790157804068!5m2!1sfr!2sbe"
+                title="Plan d'accès au salon Maryline Beauty à Fès"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       PIED DE PAGE
+       ============================================================ -->
+    <footer class="site-footer">
+      <div class="wrap f-grid">
+        <a
+          class="brand"
+          href="#top"
+          aria-label="Maryline Beauty Fès, retour en haut de page"
+        >
+          <span class="mono gold-text" aria-hidden="true">MB</span>
+          <span class="brand-name gold-text" aria-hidden="true"
+            >Maryline<small>Beauty Fès</small></span
+          >
         </a>
-        <a href="https://www.tiktok.com/@marylinebeautyfes20" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg aria-hidden="true"><use href="#tiktok"/></svg>
-        </a>
-        <a href="tel:+212665108043" aria-label="Appeler le salon">
-          <svg aria-hidden="true"><use href="#phone"/></svg>
-        </a>
+
+        <nav class="f-links" aria-label="Liens du pied de page">
+          <a href="#soins">Soins</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#mariee">Pack Mariée</a>
+          <a href="#galerie">Galerie</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="socials">
+          <a
+            href="https://www.instagram.com/marylinebeauty.fes/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <svg aria-hidden="true"><use href="#insta" /></svg>
+          </a>
+          <a
+            href="https://www.tiktok.com/@marylinebeautyfes20"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok"
+          >
+            <svg aria-hidden="true"><use href="#tiktok" /></svg>
+          </a>
+          <a href="tel:+212665108043" aria-label="Appeler le salon">
+            <svg aria-hidden="true"><use href="#phone" /></svg>
+          </a>
+        </div>
       </div>
 
-    </div>
+      <p class="copy">
+        © 2026 Maryline Beauty Fès — Salon esthétique &amp; coiffure à Fès
+      </p>
+    </footer>
 
-    <p class="copy">© 2026 Maryline Beauty Fès — Salon esthétique &amp; coiffure à Fès</p>
-  </footer>
-
-
-  <!-- ============================================================
+    <!-- ============================================================
        BARRE D'ACTION MOBILE : fixée en bas de l'écran
        ============================================================ -->
-  <div class="m-bar">
-    <a class="btn-appeler" href="tel:+212665108043">
-      <svg aria-hidden="true"><use href="#phone"/></svg>
-      Appeler
-    </a>
-    <a class="btn-contour" href="https://www.instagram.com/marylinebeauty.fes/" target="_blank" rel="noopener">
-      <svg aria-hidden="true"><use href="#insta"/></svg>
-      Instagram
-    </a>
-  </div>
-
-</body>
+    <div class="m-bar">
+      <a class="btn-appeler" href="tel:+212665108043">
+        <svg aria-hidden="true"><use href="#phone" /></svg>
+        Appeler
+      </a>
+      <a
+        class="btn-contour"
+        href="https://www.instagram.com/marylinebeauty.fes/"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg aria-hidden="true"><use href="#insta" /></svg>
+        Instagram
+      </a>
+    </div>
+  </body>
 </html>
