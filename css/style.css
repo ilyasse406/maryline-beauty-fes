@@ -45,7 +45,6 @@
   font-display: swap;
 }
 
-
 /* ============================================================
    2. BASES : réglages généraux
    ============================================================ */
@@ -78,8 +77,8 @@ html {
 /* Couleurs de la charte */
 :root {
   --noir: #000000;
-  --or: #C9964F;
-  --ivoire: #F2E6D3;
+  --or: #c9964f;
+  --ivoire: #f2e6d3;
 }
 
 body {
@@ -98,12 +97,11 @@ a {
 
 /* Texte en or métallique (réutilisable partout) */
 .gold-text {
-  background: linear-gradient(180deg, #F4D59A, #D6A560 45%, #9A6A35);
+  background: linear-gradient(180deg, #f4d59a, #d6a560 45%, #9a6a35);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* ============================================================
    3. BOUTONS
@@ -115,7 +113,7 @@ a {
   align-items: center;
   gap: 8px;
   padding: 12px 22px;
-  background: linear-gradient(180deg, #F4D59A, #C9964F 55%, #9A6A35);
+  background: linear-gradient(180deg, #f4d59a, #c9964f 55%, #9a6a35);
   color: #000000;
   font-family: "Cinzel", "Times New Roman", serif;
   font-weight: 600;
@@ -150,7 +148,6 @@ a {
   fill: currentColor;
 }
 
-
 /* ============================================================
    4. EN-TÊTE
    ============================================================ */
@@ -184,7 +181,9 @@ a {
   height: 42px;
   border-radius: 50%;
   border: 1.5px solid var(--or);
-  box-shadow: 0 0 0 3px var(--noir), 0 0 0 4px #7A5128;
+  box-shadow:
+    0 0 0 3px var(--noir),
+    0 0 0 4px #7a5128;
   display: grid;
   place-items: center;
   font-size: 16px;
@@ -255,7 +254,9 @@ a {
   width: 22px;
   height: 1.5px;
   background: var(--or);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* Burger → croix quand le menu est ouvert */
@@ -296,7 +297,6 @@ a {
 .m-bar {
   display: none;
 }
-
 
 /* ============================================================
    5. HERO
@@ -347,10 +347,18 @@ a {
   bottom: 30px;
 }
 
-.edge-t { top: 0; }
-.edge-b { bottom: 0; }
-.edge-l { left: 0; }
-.edge-r { right: 0; }
+.edge-t {
+  top: 0;
+}
+.edge-b {
+  bottom: 0;
+}
+.edge-l {
+  left: 0;
+}
+.edge-r {
+  right: 0;
+}
 
 /* Coins en filigrane (un dessin, retourné en miroir) */
 .coin {
@@ -360,10 +368,25 @@ a {
   color: var(--or);
 }
 
-.coin-hg { top: -6px; left: -6px; }
-.coin-hd { top: -6px; right: -6px; transform: scaleX(-1); }
-.coin-bg { bottom: -6px; left: -6px; transform: scaleY(-1); }
-.coin-bd { bottom: -6px; right: -6px; transform: scale(-1); }
+.coin-hg {
+  top: -6px;
+  left: -6px;
+}
+.coin-hd {
+  top: -6px;
+  right: -6px;
+  transform: scaleX(-1);
+}
+.coin-bg {
+  bottom: -6px;
+  left: -6px;
+  transform: scaleY(-1);
+}
+.coin-bd {
+  bottom: -6px;
+  right: -6px;
+  transform: scale(-1);
+}
 
 /* Textes du hero */
 .hero-text {
@@ -431,7 +454,7 @@ a {
   max-width: 30em;
   margin: 0 auto 26px;
   font-size: 17px;
-  color: #BFAF96;
+  color: #bfaf96;
   text-wrap: balance;
 }
 
@@ -460,10 +483,12 @@ a {
   background: radial-gradient(ellipse at 50% 30%, #3a2a18, #120c06 70%);
   display: grid;
   place-items: center;
-  color: #BFAF96;
+  color: #bfaf96;
   font-style: italic;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0.55) contrast(1.05) brightness(0.9) sepia(0.25);
 }
-
 
 /* ============================================================
    6. SECTIONS : éléments communs
@@ -498,7 +523,7 @@ a {
 .sec-head p {
   max-width: 34em;
   margin: 10px auto 0;
-  color: #BFAF96;
+  color: #bfaf96;
   text-wrap: balance;
 }
 
@@ -528,7 +553,6 @@ a {
   height: 10px;
   fill: var(--or);
 }
-
 
 /* ============================================================
    7. SECTION SOINS SIGNATURE
@@ -593,7 +617,7 @@ a {
   margin-bottom: 3px;
   font-style: italic;
   font-size: 13px;
-  color: #BFAF96;
+  color: #bfaf96;
 }
 
 /* Étiquette dorée du prix */
@@ -601,7 +625,7 @@ a {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 6px;
-  background: linear-gradient(180deg, #F4D59A, #C9964F 55%, #9A6A35);
+  background: linear-gradient(180deg, #f4d59a, #c9964f 55%, #9a6a35);
   color: #000000;
   font-family: "Cinzel", "Times New Roman", serif;
   font-weight: 700;
@@ -612,7 +636,6 @@ a {
 .pill span {
   font-size: 11px;
 }
-
 
 /* ============================================================
    8. SECTION TARIFS
@@ -637,12 +660,12 @@ a {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.05em;
-  color: #BFAF96;
+  color: #bfaf96;
 }
 
 /* Onglet actif */
 .tabs button[aria-selected="true"] {
-  color: #F4D59A;
+  color: #f4d59a;
 }
 
 .tabs button[aria-selected="true"]::after {
@@ -698,7 +721,7 @@ a {
 .dots {
   flex: 1;
   min-width: 16px;
-  border-bottom: 1px dotted #7A5128;
+  border-bottom: 1px dotted #7a5128;
   transform: translateY(-5px);
 }
 
@@ -710,7 +733,7 @@ a {
 
 .plist em {
   font-size: 14px;
-  color: #BFAF96;
+  color: #bfaf96;
 }
 
 /* ============================================================
@@ -738,7 +761,7 @@ a {
   padding: 16px;
   font-style: italic;
   font-size: 15px;
-  color: #BFAF96;
+  color: #bfaf96;
 }
 
 /* Carrousel des photos (mobile) */
@@ -767,7 +790,7 @@ a {
   justify-items: center;
   align-content: center;
   padding: 34px 24px;
-  background: #15110C;
+  background: #15110c;
   border: 1px solid rgba(201, 150, 79, 0.4);
   text-align: center;
 }
@@ -837,7 +860,9 @@ a {
   height: 8px;
   border-radius: 50%;
   border: 1px solid var(--or);
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .dot.is-active {
@@ -888,7 +913,7 @@ a {
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.08em;
-  color: #F4D59A;
+  color: #f4d59a;
 }
 
 /* Sur ordinateur (souris) : légende et zoom au survol */
@@ -896,7 +921,9 @@ a {
   .g-item figcaption {
     opacity: 0;
     transform: translateY(6px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
   }
 
   .g-item:hover figcaption {
@@ -935,10 +962,12 @@ a {
   align-items: center;
   gap: 14px;
   padding: 16px;
-  background: #15110C;
+  background: #15110c;
   border: 1px solid rgba(201, 150, 79, 0.3);
   color: var(--ivoire);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .c-item:hover,
@@ -971,7 +1000,7 @@ a {
 .hours,
 .map {
   padding: 22px;
-  background: #15110C;
+  background: #15110c;
   border: 1px solid rgba(201, 150, 79, 0.3);
 }
 
@@ -1015,7 +1044,7 @@ a {
 
 /* Informations encore manquantes */
 .todo {
-  color: #F4D59A;
+  color: #f4d59a;
   font-style: italic;
 }
 
@@ -1027,10 +1056,18 @@ a {
   place-items: center;
   border: 1px solid rgba(201, 150, 79, 0.2);
   background:
-    repeating-linear-gradient(0deg, rgba(201, 150, 79, 0.06) 0 1px, transparent 1px 34px),
-    repeating-linear-gradient(90deg, rgba(201, 150, 79, 0.06) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(
+      0deg,
+      rgba(201, 150, 79, 0.06) 0 1px,
+      transparent 1px 34px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(201, 150, 79, 0.06) 0 1px,
+      transparent 1px 34px
+    ),
     #0e0905;
-      width: 100%;
+  width: 100%;
   border: 0;
   filter: grayscale(0.3) brightness(0.85);
 }
@@ -1044,7 +1081,7 @@ a {
 .hours-note {
   margin: 10px 0 0;
   font-style: italic;
-  color: #BFAF96;
+  color: #bfaf96;
 }
 
 /* ============================================================
@@ -1075,7 +1112,7 @@ a {
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.06em;
-  color: #BFAF96;
+  color: #bfaf96;
   transition: color 0.3s ease;
 }
 
@@ -1113,14 +1150,13 @@ a {
 .copy {
   margin: 26px 0 0;
   font-size: 15px;
-  color: #BFAF96;
+  color: #bfaf96;
 }
 
 /* ============================================================
    8 sexies. PAGE 404
    ============================================================ */
 
-   
 .page-404 {
   min-height: 100svh;
   display: grid;
@@ -1140,7 +1176,6 @@ a {
 .page-404 h1 {
   margin: 10px 0 0;
 }
-
 
 /* ============================================================
    9. RESPONSIVE : TÉLÉPHONE (759px et moins)
@@ -1197,7 +1232,6 @@ a {
   }
 }
 
-
 /* ============================================================
    10. RESPONSIVE : ORDINATEUR (900px et plus)
    ============================================================ */
@@ -1253,13 +1287,13 @@ a {
     min-height: 320px;
   }
 
-    /* Galerie : 4 colonnes */
+  /* Galerie : 4 colonnes */
   .gallery {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
   }
 
-    /* Contact : 2 colonnes */
+  /* Contact : 2 colonnes */
   .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1268,7 +1302,6 @@ a {
     grid-column: 1 / -1;
   }
 }
-
 
 /* ============================================================
    11. RESPONSIVE : GRAND ÉCRAN (1100px et plus)
@@ -1297,7 +1330,7 @@ a {
     gap: 28px;
   }
 
-    .slider-dots {
+  .slider-dots {
     display: none;
   }
 
@@ -1310,7 +1343,7 @@ a {
     order: 1;
   }
 
-    /* Contact : 3 colonnes */
+  /* Contact : 3 colonnes */
   .contact-grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
   }
@@ -1319,13 +1352,12 @@ a {
     grid-column: auto;
   }
 
-    /* Pied de page : logo, liens, réseaux sur une ligne */
+  /* Pied de page : logo, liens, réseaux sur une ligne */
   .f-grid {
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
   }
 }
-
 
 /* ============================================================
    12. ANIMATIONS (seulement si la visiteuse ne les a pas désactivées)
@@ -1373,17 +1405,32 @@ a {
     animation: apparaitre 0.8s ease both;
   }
 
-  .tagline    { animation-delay: 1.7s; }
-  .slogan     { animation-delay: 1.95s; }
-  .hero-intro { animation-delay: 2.1s; }
-  .hero-btns  { animation-delay: 2.25s; }
+  .tagline {
+    animation-delay: 1.7s;
+  }
+  .slogan {
+    animation-delay: 1.95s;
+  }
+  .hero-intro {
+    animation-delay: 2.1s;
+  }
+  .hero-btns {
+    animation-delay: 2.25s;
+  }
 
   /* Reflet de lumière sur le nom du salon */
   .shimmer {
     background:
-      linear-gradient(110deg, transparent 35%, rgba(255, 243, 209, 0.9) 50%, transparent 65%),
-      linear-gradient(180deg, #F4D59A, #D6A560 45%, #9A6A35);
-    background-size: 260% 100%, 100% 100%;
+      linear-gradient(
+        110deg,
+        transparent 35%,
+        rgba(255, 243, 209, 0.9) 50%,
+        transparent 65%
+      ),
+      linear-gradient(180deg, #f4d59a, #d6a560 45%, #9a6a35);
+    background-size:
+      260% 100%,
+      100% 100%;
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
@@ -1391,43 +1438,74 @@ a {
   }
 }
 
-
 /* ============================================================
    13. RECETTES D'ANIMATION (@keyframes)
    ============================================================ */
 
 /* Filet qui s'étire horizontalement */
 @keyframes dessinerX {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 /* Filet qui s'étire verticalement */
 @keyframes dessinerY {
-  from { transform: scaleY(0); }
-  to   { transform: scaleY(1); }
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 
 /* Fondu d'apparition */
 @keyframes apparaitre {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Monte en apparaissant (arche) */
 @keyframes monter {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Descend en apparaissant, avec rebond (couronne) */
 @keyframes poser {
-  from { opacity: 0; transform: translateY(-14px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Reflet qui traverse le texte */
 @keyframes reflet {
-  from { background-position: 100% 0, 0 0; }
-  to   { background-position: 0 0, 0 0; }
+  from {
+    background-position:
+      100% 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 0,
+      0 0;
+  }
 }
