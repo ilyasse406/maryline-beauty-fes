@@ -90,6 +90,21 @@ body {
   line-height: 1.6;
 }
 
+/* Sécurité : rien ne peut dépasser la largeur de l'écran */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Les médias ne dépassent jamais de leur conteneur */
+img,
+svg,
+iframe,
+canvas {
+  max-width: 100%;
+}
+
 a {
   color: var(--or);
   text-decoration: none;
