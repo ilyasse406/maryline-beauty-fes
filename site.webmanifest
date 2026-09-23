@@ -1,0 +1,17 @@
+{
+  "name": "Maryline Beauty Fès",
+  "short_name": "Maryline Beauty",
+  "description": "Salon esthétique et coiffure pour femmes à Fès.",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
