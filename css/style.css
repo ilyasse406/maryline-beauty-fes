@@ -1116,6 +1116,23 @@ a {
   color: #BFAF96;
 }
 
+/* ============================================================
+   8 sexies. PAGE 404
+   ============================================================ */
+
+.page-404 {
+  min-height: 100svh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page-404 h1 {
+  margin: 10px 0 0;
+}
+
 
 /* ============================================================
    9. RESPONSIVE : TÉLÉPHONE (759px et moins)
