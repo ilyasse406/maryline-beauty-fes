@@ -824,6 +824,27 @@ a {
   white-space: nowrap;
 }
 
+/* Points indicateurs du carrousel */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--or);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot.is-active {
+  background: var(--or);
+  transform: scale(1.25);
+}
+
 /* ============================================================
    8 ter. SECTION GALERIE
    ============================================================ */
@@ -1249,6 +1270,10 @@ a {
   .bridal {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
     gap: 28px;
+  }
+
+    .slider-dots {
+    display: none;
   }
 
   /* Le carrousel redevient deux photos séparées, de chaque côté */

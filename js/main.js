@@ -116,3 +116,19 @@ onglets.forEach((onglet, index) => {
     }
   });
 });
+
+/* ============================================================
+   POINTS DU CARROUSEL (PACK MARIÉE)
+   ============================================================ */
+
+const carrousel = document.querySelector(".bridal-slider");
+const points = document.querySelectorAll(".slider-dots .dot");
+
+if (carrousel && points.length) {
+  carrousel.addEventListener("scroll", () => {
+    const index = Math.round(carrousel.scrollLeft / carrousel.clientWidth);
+    points.forEach((point, i) => {
+      point.classList.toggle("is-active", i === index);
+    });
+  });
+}
