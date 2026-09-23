@@ -50,12 +50,21 @@
     "url": "https://VOTRE-DOMAINE.ma/",
     "image": "https://VOTRE-DOMAINE.ma/images/partage/maryline-beauty-fes.jpg",
     "telephone": "+212665108043",
-    "priceRange": "20 DH – 1000 DH",
+        "priceRange": "20 DH – 1000 DH",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "N2 Rue Abi Ouakass, Bouremana",
       "addressLocality": "Fès",
+      "postalCode": "30060",
       "addressCountry": "MA"
     },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    },
+    "sameAs": [
     "sameAs": [
       "https://www.instagram.com/marylinebeautyfes/",
       "https://www.tiktok.com/@marylinebeautyfes20"
@@ -115,6 +124,9 @@
     <symbol id="eye" viewBox="0 0 20 20"><path d="M1 10 Q10 2 19 10 Q10 18 1 10Z M10 7 a3 3 0 1 0 0.01 0Z" fill-rule="evenodd"/></symbol>
     <symbol id="wave" viewBox="0 0 20 20"><path d="M6 1 C2 5 10 8 6 12 C3 15 6 18 8 19 L10 19 C8 17 6 15 9 12 C13 8 5 5 9 1Z M12 1 C8 5 16 8 12 12 C9 15 12 18 14 19 L16 19 C14 17 12 15 15 12 C19 8 11 5 15 1Z"/></symbol>
     <symbol id="nail" viewBox="0 0 20 20"><path d="M6 19 V8 a4 4 0 0 1 8 0 V19Z M8 8 a2 2 0 0 1 4 0 V11 H8Z" fill-rule="evenodd"/></symbol>
+
+    <symbol id="tiktok" viewBox="0 0 24 24"><path d="M16.5 2c.3 2.3 1.7 3.9 4 4.1v3.1a7.5 7.5 0 0 1-4-1.2v6.6A6.4 6.4 0 1 1 10 8.3v3.2a3.3 3.3 0 1 0 3.3 3.3V2z"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></symbol>
   </svg>
 
 
@@ -499,6 +511,61 @@
       </a>
     </div>
 
+  </div>
+</section>
+
+<!-- ==========================================================
+     SECTION CONTACT : téléphone, réseaux, horaires, adresse
+     ========================================================== -->
+<section class="section" id="contact" aria-labelledby="contact-titre">
+  <div class="wrap">
+
+    <!-- Titre de section -->
+    <div class="sec-head">
+      <div class="divider" aria-hidden="true"><svg><use href="#diamond"/></svg></div>
+      <h2 id="contact-titre" class="gold-text">Nous trouver</h2>
+      <p>Pour prendre rendez-vous, appelez-nous ou écrivez-nous sur Instagram.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Moyens de contact -->
+      <div class="c-list">
+        <a class="c-item" href="tel:+212665108043">
+          <span class="p-icon" aria-hidden="true"><svg><use href="#phone"/></svg></span>
+          <span><strong>Téléphone</strong>0665 10 80 43</span>
+        </a>
+        <a class="c-item" href="https://www.instagram.com/marylinebeauty.fes/" target="_blank" rel="noopener">
+          <span class="p-icon" aria-hidden="true"><svg><use href="#insta"/></svg></span>
+          <span><strong>Instagram</strong>@marylinebeautyfes</span>
+        </a>
+        <a class="c-item" href="https://www.tiktok.com/@marylinebeautyfes20" target="_blank" rel="noopener">
+          <span class="p-icon" aria-hidden="true"><svg><use href="#tiktok"/></svg></span>
+          <span><strong>TikTok</strong>@marylinebeautyfes20</span>
+        </a>
+      </div>
+
+      <!-- Horaires et adresse (À COMPLÉTER avec la cliente) -->
+      <div class="hours">
+        <h3>Horaires</h3>
+        <dl>
+            <dt>Tous les jours</dt><dd>10h – 21h</dd>
+        </dl>
+        <p class="hours-note">Ouvert 7 jours sur 7</p>
+        <address>
+        <strong>Adresse</strong>
+        N2 Rue Abi Ouakass, Bouremana<br>
+        Fès 30060, Maroc
+        </address>
+    </div>
+
+      <!-- Plan d'accès (À REMPLACER par l'intégration Google Maps) -->
+      <div class="map">
+        <h3>Plan d'accès</h3>
+        <div class="map-box" aria-hidden="true"><svg><use href="#pin"/></svg></div>
+      </div>
+
+    </div>
   </div>
 </section>
 

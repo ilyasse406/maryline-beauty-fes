@@ -879,6 +879,136 @@ a {
   text-align: center;
 }
 
+/* ============================================================
+   8 quater. SECTION CONTACT
+   ============================================================ */
+
+.contact-grid {
+  display: grid;
+  gap: 18px;
+}
+
+/* Liste des moyens de contact */
+.c-list {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.c-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: #15110C;
+  border: 1px solid rgba(201, 150, 79, 0.3);
+  color: var(--ivoire);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.c-item:hover,
+.c-item:focus-visible {
+  border-color: var(--or);
+  transform: translateY(-1px);
+}
+
+.c-item .p-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.c-item svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--or);
+}
+
+.c-item strong {
+  display: block;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--or);
+}
+
+/* Horaires et adresse */
+.hours,
+.map {
+  padding: 22px;
+  background: #15110C;
+  border: 1px solid rgba(201, 150, 79, 0.3);
+}
+
+.hours h3,
+.map h3 {
+  margin: 0 0 10px;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--or);
+}
+
+.hours dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 16px;
+  margin: 0;
+}
+
+.hours dd {
+  margin: 0;
+  text-align: right;
+}
+
+.hours address {
+  display: block;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(201, 150, 79, 0.2);
+  font-style: normal;
+}
+
+.hours address strong {
+  display: block;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--or);
+}
+
+/* Informations encore manquantes */
+.todo {
+  color: #F4D59A;
+  font-style: italic;
+}
+
+/* Plan d'accès */
+.map-box {
+  min-height: 200px;
+  height: calc(100% - 40px);
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(201, 150, 79, 0.2);
+  background:
+    repeating-linear-gradient(0deg, rgba(201, 150, 79, 0.06) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(201, 150, 79, 0.06) 0 1px, transparent 1px 34px),
+    #0e0905;
+}
+
+.map-box svg {
+  width: 34px;
+  height: 34px;
+  fill: url(#goldFill);
+}
+
+.hours-note {
+  margin: 10px 0 0;
+  font-style: italic;
+  color: #BFAF96;
+}
+
 
 /* ============================================================
    9. RESPONSIVE : TÉLÉPHONE (759px et moins)
@@ -991,6 +1121,15 @@ a {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
   }
+
+    /* Contact : 2 colonnes */
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid .map {
+    grid-column: 1 / -1;
+  }
 }
 
 
@@ -1023,6 +1162,15 @@ a {
 
   .bridal .photo:last-child {
     display: block;
+  }
+
+    /* Contact : 3 colonnes */
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .contact-grid .map {
+    grid-column: auto;
   }
 }
 
