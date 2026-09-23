@@ -1012,6 +1012,75 @@ a {
   color: #BFAF96;
 }
 
+/* ============================================================
+   8 quinquies. PIED DE PAGE
+   ============================================================ */
+
+.site-footer {
+  padding: 44px 0 34px;
+  border-top: 1px solid rgba(201, 150, 79, 0.3);
+  text-align: center;
+}
+
+.f-grid {
+  display: grid;
+  gap: 22px;
+  justify-items: center;
+}
+
+.f-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 20px;
+}
+
+.f-links a {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #BFAF96;
+  transition: color 0.3s ease;
+}
+
+.f-links a:hover,
+.f-links a:focus-visible {
+  color: var(--or);
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socials a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--or);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s ease;
+}
+
+.socials a:hover,
+.socials a:focus-visible {
+  background: rgba(201, 150, 79, 0.15);
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--or);
+}
+
+.copy {
+  margin: 26px 0 0;
+  font-size: 15px;
+  color: #BFAF96;
+}
+
 
 /* ============================================================
    9. RESPONSIVE : TÉLÉPHONE (759px et moins)
@@ -1174,6 +1243,12 @@ a {
 
   .contact-grid .map {
     grid-column: auto;
+  }
+
+    /* Pied de page : logo, liens, réseaux sur une ligne */
+  .f-grid {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
   }
 }
 
