@@ -1224,7 +1224,7 @@ a {
 
   /* Hero plus compact */
   .hero {
-    padding: 28px 12px 40px;
+    padding: 28px 12px 56px;
   }
 
   .deco {
@@ -1387,6 +1387,7 @@ a {
   /* Entrée du hero : l'arche monte, la couronne se pose */
   .arch {
     animation: monter 1s ease 0.5s both;
+    margin: 60px auto 0;
   }
 
   .hero .crown {
