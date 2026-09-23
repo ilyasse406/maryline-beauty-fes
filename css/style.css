@@ -810,6 +810,75 @@ a {
   white-space: nowrap;
 }
 
+/* ============================================================
+   8 ter. SECTION GALERIE
+   ============================================================ */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+/* Une vignette */
+.g-item {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(201, 150, 79, 0.2);
+}
+
+/* La photo (provisoire ou vraie image) */
+.g-photo,
+.g-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: radial-gradient(ellipse at 40% 30%, #3a2a18, #0c0804 75%);
+  transition: transform 0.6s ease;
+}
+
+/* Légende en bas de la vignette */
+.g-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px 10px 10px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #F4D59A;
+}
+
+/* Sur ordinateur (souris) : légende et zoom au survol */
+@media (hover: hover) {
+  .g-item figcaption {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .g-item:hover figcaption {
+    opacity: 1;
+    transform: none;
+  }
+
+  .g-item:hover .g-photo,
+  .g-item:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.gallery-cta {
+  text-align: center;
+}
+
 
 /* ============================================================
    9. RESPONSIVE : TÉLÉPHONE (759px et moins)
@@ -915,6 +984,12 @@ a {
   .photo {
     aspect-ratio: auto;
     min-height: 320px;
+  }
+
+    /* Galerie : 4 colonnes */
+  .gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
   }
 }
 
