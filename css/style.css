@@ -1263,6 +1263,15 @@ a {
   .plist li {
     max-width: 100%;
   }
+
+  /* Empêche les colonnes de la grille de s'élargir au-delà de l'écran */
+  .price-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .price-layout > * {
+    min-width: 0;
+  }
 }
 
 /* ============================================================
