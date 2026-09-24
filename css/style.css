@@ -88,6 +88,8 @@ body {
   font-family: "EB Garamond", Georgia, serif;
   font-size: 18px;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Sécurité : rien ne peut dépasser la largeur de l'écran */
