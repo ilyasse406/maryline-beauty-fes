@@ -1252,6 +1252,17 @@ a {
     flex: 1 1 10px;
     min-width: 10px;
   }
+
+  .plist {
+    columns: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .plist li {
+    max-width: 100%;
+  }
 }
 
 /* ============================================================
