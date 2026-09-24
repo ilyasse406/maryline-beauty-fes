@@ -1233,6 +1233,25 @@ a {
   .arch {
     margin: 100px auto 0;
   }
+
+  /* Tarifs : ajuster les lignes de prix sur petit écran */
+  .plist li {
+    font-size: 16px;
+  }
+
+  .plist b {
+    flex: none;
+  }
+
+  .plist li > span:first-child {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .dots {
+    flex: 1 1 10px;
+    min-width: 10px;
+  }
 }
 
 /* ============================================================
