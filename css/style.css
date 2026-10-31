@@ -956,6 +956,64 @@ a {
 }
 
 /* ============================================================
+   8 ter bis. SECTION AVIS CLIENTES
+   ============================================================ */
+
+.avis-list {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+/* Une carte d'avis */
+.avis {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 24px 22px;
+  background: #15110c;
+  border: 1px solid rgba(201, 150, 79, 0.3);
+}
+
+/* 5 étoiles dorées */
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.stars svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--or);
+}
+
+/* Texte de l'avis : prend la hauteur libre pour aligner les signatures */
+.avis p {
+  flex: 1;
+  margin: 0;
+}
+
+/* Signature : prénom puis date */
+.avis footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.avis cite {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--or);
+}
+
+.avis-date {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ============================================================
    8 quater. SECTION CONTACT
    ============================================================ */
 
@@ -1326,6 +1384,11 @@ a {
   .gallery {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  /* Avis : 3 colonnes */
+  .avis-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   /* Contact : 2 colonnes */
