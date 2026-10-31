@@ -95,7 +95,7 @@ body {
 /* Sécurité : rien ne peut dépasser la largeur de l'écran */
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
